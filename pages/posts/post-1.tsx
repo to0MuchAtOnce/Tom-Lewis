@@ -4,7 +4,7 @@ import Container from "../../components/Container";
 const FirstPost: NextPage = () => {
   return (
     <Container title="FirstPost">
-      <div>Post 1</div>
+      <div>What I Want</div>
     </Container>
   );
 };

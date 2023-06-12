@@ -14,6 +14,9 @@ export const Content = styled.div`
 `;
 
 export const PageContainer = styled.div`
-  padding: 20px;
-  width: 80vw;
+  width: 100vw;
+  max-width: 1096px;
+  padding: 32px;
+  margin: 0 auto;
+  text-align: left;
 `;
