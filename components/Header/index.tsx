@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Menu, ChevronLeft } from "@styled-icons/material";
 import {
   HeaderContainer,
@@ -6,7 +7,6 @@ import {
   LinkContainer,
   LogoContainer,
 } from "./Header.styles";
-import Link from "next/link";
 
 type HeaderProps = {
   isOpened: boolean;
