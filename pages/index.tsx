@@ -24,10 +24,10 @@ const Home: NextPage<HomeProps> = ({allPostsData}) => {
         <h2 className="headingLg">Blog</h2>
         <ul className="list">
           {allPostsData.map(({ id, date, title }) => (
-            <li className="listItem" key={id}>
+            <li className="listItem flex" key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
-              <small className="lightText"> <Date dateString={date}/></small>
+            <small className="lightText"> <Date dateString={date}/></small>
             </li>
           ))}
         </ul>
