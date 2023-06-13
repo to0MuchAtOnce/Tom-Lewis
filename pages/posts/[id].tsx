@@ -2,11 +2,8 @@ import type, { NextPage } from "next";
 import { GetStaticProps } from 'next';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
 import Container from "../../components/Container";
+import Date from '../../components/Date';
 
-
-interface PostProps {
-  postData: PostData;
-}
 
 export const getStaticProps: GetStaticProps<PostProps> = async ({ params }) => {
 if (!params || typeof params.id !== 'string') {
@@ -15,7 +12,7 @@ if (!params || typeof params.id !== 'string') {
     };
   }
 
-  const postData = getPostData(params.id);
+  const postData = await getPostData(params.id);
   return {
     props: {
       postData,
@@ -31,16 +28,25 @@ export async function getStaticPaths() {
   };
 }
 
+interface PostProps {
+  postData: PostData;
+}
+
 const Post: NextPage<PostProps> = ({postData}) => {
   return ( 
-    <Container title="Post">
-      {postData.title}
+    <Container title={postData.title}>
+      <h1 className='headingXl'>{postData.title}</h1>
+      <article>
       <br />
-      {postData.id}
+      <div className='lightText'>
+      <Date dateString={postData.date} />
+      </div>
       <br />
-      {postData.date}
+      <div dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
+      </article>
   </Container>
   );
 };
+
 
 export default Post;
