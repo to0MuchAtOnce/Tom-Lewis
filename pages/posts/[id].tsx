@@ -38,11 +38,11 @@ const Post: NextPage<PostProps> = ({postData}) => {
       <h1 className='headingXl'>{postData.title}</h1>
       <article>
       <br />
-      <div className='lightText'>
+      <div className='PostDate'>
       <Date dateString={postData.date} />
       </div>
       <br />
-      <div dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
+      <div className="postText" dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
       </article>
   </Container>
   );
