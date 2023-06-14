@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: ${(props) => props.theme.colors.mainBg};
   color: ${(props) => props.theme.colors.textDark};
 `;
 
@@ -15,8 +16,8 @@ export const Content = styled.div`
 
 export const PageContainer = styled.div`
   width: 100vw;
-  max-width: 1096px;
-  padding: 32px;
+  max-width: 880px;
+  padding: 16px;
   margin: 0 auto;
   text-align: left;
 `;

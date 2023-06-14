@@ -14,8 +14,13 @@ a {
   box-sizing: border-box;
 }
 
+.headingXl {
+  margin-bottom: 5px;
+}
+
 .headingLg {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.3px;
   line-height: 1.4;
   margin: 1rem 0;
 }
@@ -30,6 +35,19 @@ a {
   padding: 0;
 }
 
+.listItem {
+  margin: 0;
+  letter-spacing: 0.2px;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 0.5px solid #959595;
+  padding: 0.35em;
+}
+
+.listItem:hover {
+  text-decoration: underline;
+}
+
 .padding1px {
   padding-top: 1px;
 }
@@ -38,13 +56,32 @@ a {
   margin: 0 0 1.25rem;
 }
 
-.lightText {
-  color: #666;
+.Date {
+  color: #4e7fc5;
+}
+
+.PostDate {
+  display: block;
+  color: #959595;
+}
+
+.postText {
+  letter-spacing: 0.1px;
 }
 
 .flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .Date {
+    display: none;
+  }
+
+  .PostDate {
+    display: block;
+    color: #959595;
+  }
 }
