@@ -19,9 +19,10 @@ export default function Header({ isOpened, toggleDrawer }: HeaderProps) {
     <HeaderContainer>
       <IconContainer onClick={toggleDrawer}>
         {isOpened ? <ChevronLeft /> : <Menu />}
-      </IconContainer>
-      <FlexContainer>
       <LogoContainer>Logo</LogoContainer>
+      </IconContainer>
+
+      <FlexContainer>
       <LinkContainer className="MobileMenuWrapper">
       <Link href="/"><a className="MobileMenuItem">Blog</a></Link>
       <Link href="/photo"><a className="MobileMenuItem">Photo</a></Link>
