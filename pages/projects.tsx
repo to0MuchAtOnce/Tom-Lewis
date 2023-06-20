@@ -4,7 +4,7 @@ import Container from "../components/Container";
 const Projects: NextPage = () => {
   return (
     <Container title="Projects">
-      <div>Projects</div>
+      <div className="headingLg">Projects</div>
     </Container>
   );
 };

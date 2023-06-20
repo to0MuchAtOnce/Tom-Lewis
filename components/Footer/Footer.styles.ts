@@ -8,3 +8,7 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   color: ${props => props.theme.colors.secondary};
 `;
+
+export const FooterLinkContainer = styled.div`
+  
+`

@@ -4,7 +4,7 @@ import {
   HeaderContainer,
   IconContainer,
   FlexContainer,
-  LinkContainer,
+  HeaderLinkContainer,
   LogoContainer,
 } from "./Header.styles";
 
@@ -23,12 +23,12 @@ export default function Header({ isOpened, toggleDrawer }: HeaderProps) {
       </IconContainer>
 
       <FlexContainer>
-      <LinkContainer className="MobileMenuWrapper">
-      <Link href="/"><a className="MobileMenuItem">Blog</a></Link>
-      <Link href="/photo"><a className="MobileMenuItem">Photo</a></Link>
-      <Link href="/projects"><a className="MobileMenuItem">Projects</a></Link>
-      <Link href="/about"><a className="MobileMenuItem">About</a></Link>
-      </LinkContainer>
+      <HeaderLinkContainer className="MobileMenuWrapper">
+        <Link href="/"><a className="MobileMenuItem">Blog</a></Link>
+        <Link href="/photo"><a className="MobileMenuItem">Photo</a></Link>
+        <Link href="/projects"><a className="MobileMenuItem">Projects</a></Link>
+        <Link href="/about"><a className="MobileMenuItem">About</a></Link>
+      </HeaderLinkContainer>
     </FlexContainer>
     </HeaderContainer>
   );
