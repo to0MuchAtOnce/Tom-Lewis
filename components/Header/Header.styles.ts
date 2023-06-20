@@ -18,7 +18,6 @@ export const HeaderContainer = styled.header`
 
   .MobileMenuItem:hover {
     text-decoration: underline;
-    text-decoration-color: green;
     }
 
   .MobileMenuItem:last-child {
