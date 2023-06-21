@@ -1,26 +1,15 @@
 import Link from "next/link";
-import { Menu, ChevronLeft } from "@styled-icons/material";
 import {
   HeaderContainer,
-  IconContainer,
   FlexContainer,
   HeaderLinkContainer,
   LogoContainer,
 } from "./Header.styles";
 
-type HeaderProps = {
-  isOpened: boolean;
-  toggleDrawer: () => void;
-};
-
-
-export default function Header({ isOpened, toggleDrawer }: HeaderProps) {
+export default function Header() {
   return (
     <HeaderContainer>
-      <IconContainer onClick={toggleDrawer}>
-        {isOpened ? <ChevronLeft /> : <Menu />}
       <LogoContainer>Logo</LogoContainer>
-      </IconContainer>
 
       <FlexContainer>
       <HeaderLinkContainer className="MobileMenuWrapper">
