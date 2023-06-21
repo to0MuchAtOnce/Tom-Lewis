@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 const Home: NextPage<HomeProps> = ({allPostsData}) => {
   return (
     <Container title="Blog">
-  <section className={"headingMd padding1px"}>
+  <section>
         <h2 className="headingLg">Blog</h2>
         <ul className="list">
           {allPostsData.map(({ id, date, title }) => (
