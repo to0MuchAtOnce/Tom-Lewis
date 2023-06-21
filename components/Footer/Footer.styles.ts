@@ -1,19 +1,22 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   display: flex;
-  background: ${props => props.theme.colors.mainBg};
+  background: ${(props) => props.theme.colors.mainBg};
   height: 50px;
   align-items: center;
   justify-content: center;
-  color: ${props => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.secondary};
 
   .FooterMenuItem {
     padding-right: 1rem;
     font-size: 30px;
   }
+
+  .FooterIcon:hover {
+    fill: red;
+    transition: all 0.3s ease-in-out;
+  }
 `;
 
-export const FooterLinkContainer = styled.div`
-  
-`
+export const FooterLinkContainer = styled.div``;

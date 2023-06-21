@@ -3,14 +3,31 @@ import { FooterContainer } from "./Footer.styles";
 import { FooterLinkContainer } from "./Footer.styles";
 
 import {IoLogoLinkedin, IoLogoGithub, IoLogoTwitter} from "react-icons/io5"
+import { IconContext } from "react-icons";
 
 export default function Footer() {
+  const IconColor = '#427fac';
   return (
   <FooterContainer>
       <FooterLinkContainer>
-        <Link href="#"><a className="FooterMenuItem"> <IoLogoLinkedin /></a></Link>
-        <Link href="#"><a className="FooterMenuItem"> <IoLogoGithub/> </a></Link>
-        <Link href="#"><a className="FooterMenuItem"><IoLogoTwitter/></a></Link>
+
+        <Link href="#" passHref>
+          <IconContext.Provider value={{className: 'FooterIcon', color: IconColor}}>
+          <a className="FooterMenuItem"><IoLogoLinkedin/></a>
+          </IconContext.Provider>
+        </Link>
+
+          <Link href="#" passHref>
+            <IconContext.Provider value={{className: 'FooterIcon', color: IconColor}}>
+            <a className="FooterMenuItem"><IoLogoGithub/></a> 
+            </IconContext.Provider>
+          </Link>
+        
+          <Link href="#" passHref>
+            <IconContext.Provider value={{className: 'FooterIcon', color: IconColor}}>
+            <a className="FooterMenuItem"><IoLogoTwitter/></a>
+            </IconContext.Provider>
+          </Link>
       </FooterLinkContainer>
   </FooterContainer>
   )
