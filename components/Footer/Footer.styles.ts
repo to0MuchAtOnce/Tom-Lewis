@@ -7,6 +7,9 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: center;
   color: ${(props) => props.theme.colors.secondary};
+  @media (min-width: 1210px) {
+    display: none;
+  }
 
   .FooterMenuItem {
     padding-right: 1rem;

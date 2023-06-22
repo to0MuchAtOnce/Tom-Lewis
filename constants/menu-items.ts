@@ -15,7 +15,7 @@ const MENU_OPTIONS: MenuOption[] = [
       {
         name: 'Two Forms of Pre-rendering',
         icon: Article,
-        url: '/post-2',
+        url: '/posts/pre-rendering',
       },
     ],
   },
