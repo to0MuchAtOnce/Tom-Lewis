@@ -39,7 +39,6 @@ export const FlexContainer = styled.div`
 export const LogoContainer = styled.div`
   display: flex;
   align-items: start;
-  margin: 10px;
 `;
 
 export const HeaderLinkContainer = styled.div`

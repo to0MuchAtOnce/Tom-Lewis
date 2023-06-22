@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const SidebarFooterContainer = styled.footer`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-bottom: 0.2em;
   background: ${(props) => props.theme.colors.mainBg};
   color: ${(props) => props.theme.colors.secondary};
 
@@ -17,5 +17,3 @@ export const SidebarFooterContainer = styled.footer`
     transition: all 0.3s ease-in-out;
   }
 `;
-
-export const FooterLinkContainer = styled.div``;

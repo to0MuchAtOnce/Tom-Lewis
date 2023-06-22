@@ -11,8 +11,11 @@ export default function Sidebar () {
   const isLargeScreen = useMediaQuery({ minDeviceWidth: 1210 });
   return (
     <SidebarContainer>
-      <LogoContainer>Logo</LogoContainer>
-      <MenuItemsList options={MENU_ITEMS} />
+      <div>
+        <LogoContainer>Logo</LogoContainer>
+        <MenuItemsList options={MENU_ITEMS} />
+      </div>
+
        <SidebarFooterContainer>
        {isLargeScreen ? <SidebarFooter/> : null}   
       </SidebarFooterContainer>
