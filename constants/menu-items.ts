@@ -1,62 +1,57 @@
-import React from "react";
-import {
-  Feed,
-  Camera,
-  Article,
-  Person,
-} from "@styled-icons/material";
+import React from 'react';
+import { Feed, Camera, Article, Person } from '@styled-icons/material';
 
 const MENU_OPTIONS: MenuOption[] = [
   {
-    name: "Blog",
+    name: 'Blog',
     icon: Feed,
-    url: "/",
+    url: '/',
     subItems: [
       {
-        name: "Post 1",
+        name: 'When to Use Static Generation v.s. Server-side Rendering',
         icon: Article,
-        url: "/post-1",
+        url: '/posts/ssg-ssr',
       },
       {
-        name: "Post 2",
+        name: 'Two Forms of Pre-rendering',
         icon: Article,
-        url: "/post-2",
+        url: '/post-2',
       },
     ],
   },
   {
-    name: "Photo",
+    name: 'Photo',
     icon: Camera,
-    url: "/photo",
+    url: '/photo',
     subItems: [
       {
-        name: "Colour",
+        name: 'Colour',
         icon: Person,
-        url: "/colour",
+        url: '/colour',
       },
       {
-        name: "Mono",
+        name: 'Mono',
         icon: Person,
-        url: "/mono",
+        url: '/mono',
       },
     ],
   },
   {
-    name: "Projects",
+    name: 'Projects',
     icon: Person,
-    url: "/projects",
-   subItems: [
-          {
-            name: "Polka",
-            icon: Person,
-            url: "/retail",
-          },
-        ],
+    url: '/projects',
+    subItems: [
+      {
+        name: 'Polka',
+        icon: Person,
+        url: '/retail',
+      },
+    ],
   },
   {
-    name: "About",
+    name: 'About',
     icon: Person,
-    url: "/about",
+    url: '/about',
   },
 ];
 
@@ -81,12 +76,8 @@ function makeMenuLevel(options: MenuOption[], depth = 0): MenuItem[] {
     ...option,
     id: depth === 0 ? idx.toString() : `${depth}.${idx}`,
     depth,
-    subItems:
-      option.subItems && option.subItems.length > 0
-        ? makeMenuLevel(option.subItems, depth + 1)
-        : undefined,
+    subItems: option.subItems && option.subItems.length > 0 ? makeMenuLevel(option.subItems, depth + 1) : undefined,
   }));
 }
 
 export const MENU_ITEMS: MenuItem[] = makeMenuLevel(MENU_OPTIONS);
-
