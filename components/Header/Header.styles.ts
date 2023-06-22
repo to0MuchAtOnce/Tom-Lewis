@@ -12,6 +12,7 @@ export const HeaderContainer = styled.header`
   height: 50px;
   color: ${(props) => props.theme.colors.secondary};
   @media (min-width: 1210px) {
+    display: none;
     margin: 0;
   }
 
@@ -35,7 +36,10 @@ export const FlexContainer = styled.div`
   padding: 0 1em;
 `;
 
-export const LogoContainer = styled.div``;
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: start;
+`;
 
 export const HeaderLinkContainer = styled.div`
   align-items: center;
