@@ -7,14 +7,14 @@ import remarkHtml from 'remark-html';
 const postsDirectory = path.join(process.cwd(), 'posts');
 
 export interface PostData {
-    id: string,
-    contentHtml: string;
-    [key: string]: any; // Adjust the type according to your post metadata structure
+  id: string;
+  contentHtml: string;
+  [key: string]: any;
 }
 
 export interface getAllPostIds {
-    id: string,
-    [key: string]: any;
+  id: string;
+  [key: string]: any;
 }
 
 export async function getSortedPostsData(): Promise<PostData[]> {
@@ -27,9 +27,7 @@ export async function getSortedPostsData(): Promise<PostData[]> {
 
     const matterResult: GrayMatterFile<string> = matter(fileContents);
 
-    const processedContent = await remark()
-      .use(remarkHtml)
-      .process(matterResult.content);
+    const processedContent = await remark().use(remarkHtml).process(matterResult.content);
     const contentHtml = processedContent.toString();
 
     return {
@@ -40,32 +38,18 @@ export async function getSortedPostsData(): Promise<PostData[]> {
   });
 
   const postsData = await Promise.all(allPostsData);
-    return postsData.sort((a, b) => {
-        if (a.date < b.date) {
-            return 1;
-        } else {
-            return -1;
-        }
-    });
+  return postsData.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
 }
 
-
-export function getAllPostIds(): { params: {id: string}} [] {
+export function getAllPostIds(): { params: { id: string } }[] {
   const fileNames = fs.readdirSync(postsDirectory);
 
-  // Returns an array that looks like this:
-  // [
-  //   {
-  //     params: {
-  //       id: 'ssg-ssr'
-  //     }
-  //   },
-  //   {
-  //     params: {
-  //       id: 'pre-rendering'
-  //     }
-  //   }
-  // ]
   return fileNames.map((fileName) => {
     return {
       params: {
@@ -82,10 +66,8 @@ export async function getPostData(id: string) {
   // Use gray-matter to parse the post metadata section
   const matterResult: GrayMatterFile<string> = matter(fileContents);
 
- // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(remarkHtml)
-    .process(matterResult.content);
+  // Use remark to convert markdown into HTML string
+  const processedContent = await remark().use(remarkHtml).process(matterResult.content);
   const contentHtml = processedContent.toString();
 
   // Combine the data with the id
