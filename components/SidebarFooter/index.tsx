@@ -1,7 +1,5 @@
 import Link from "next/link"
-import { FlexContainer, SidebarFooterContainer} from "./SidebarFooter.styles";
-import { useMediaQuery } from 'react-responsive';
-
+import {SidebarFooterContainer} from "./SidebarFooter.styles";
 import {IoLogoLinkedin, IoLogoGithub, IoLogoTwitter} from "react-icons/io5"
 import { IconContext } from "react-icons";
 
