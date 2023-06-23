@@ -5,7 +5,7 @@ import {MdDarkMode} from 'react-icons/md'
 import { IconContext } from "react-icons";
 
 export default function SidebarFooter() {
-  const IconColor = '#427fac';
+  const IconColor = '#737373';
   const ThemeToggleColor = '#dedede'
   return (
       <SidebarFooterContainer>

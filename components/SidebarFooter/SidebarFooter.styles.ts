@@ -10,6 +10,7 @@ export const SidebarFooterContainer = styled.footer`
   color: ${(props) => props.theme.colors.secondary};
 
   .SidebarFooterMenuItem {
+    cursor: pointer;
     padding-right: 1rem;
     font-size: 30px;
   }
@@ -20,7 +21,7 @@ export const SidebarFooterContainer = styled.footer`
   }
 
   .SidebarFooterIcon:hover {
-    fill: red;
+    fill: #427fac;
     transition: all 0.3s ease-in-out;
   }
 
