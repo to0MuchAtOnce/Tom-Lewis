@@ -28,11 +28,11 @@ export default function SidebarFooter() {
             </IconContext.Provider>
           </Link>
         </SidebarFooterLinkContainer>
-</FlexContainer>
+      </FlexContainer>
       
       <ToggleThemeContainer>
-        <div><MdDarkMode/></div>
-</ToggleThemeContainer>
+        <MdDarkMode/>
+      </ToggleThemeContainer>
 
 
     </SidebarFooterContainer>

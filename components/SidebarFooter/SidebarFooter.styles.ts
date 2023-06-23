@@ -5,6 +5,7 @@ export const SidebarFooterContainer = styled.footer`
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0.2em;
+  width: 100%;
   background: ${(props) => props.theme.colors.mainBg};
   color: ${(props) => props.theme.colors.secondary};
 
@@ -21,17 +22,16 @@ export const SidebarFooterContainer = styled.footer`
 
 export const FlexContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const SidebarFooterLinkContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
   background: red;
 `;
 
 export const ToggleThemeContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   background: blue;
 `;
