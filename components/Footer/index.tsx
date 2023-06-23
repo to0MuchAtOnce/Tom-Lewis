@@ -1,12 +1,10 @@
 import Link from "next/link"
 import { FooterContainer } from "./Footer.styles";
-import { useMediaQuery } from 'react-responsive';
-
 import {IoLogoLinkedin, IoLogoGithub, IoLogoTwitter} from "react-icons/io5"
 import { IconContext } from "react-icons";
 
 export default function Footer() {
-  const IconColor = '#427fac';
+  const IconColor = '#737373';
   return (
   <FooterContainer>
         <Link href="#" passHref>

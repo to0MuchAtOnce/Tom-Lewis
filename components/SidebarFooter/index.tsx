@@ -1,12 +1,15 @@
 import Link from "next/link"
-import {SidebarFooterContainer} from "./SidebarFooter.styles";
+import {SidebarFooterContainer, FlexContainer, ToggleThemeContainer} from "./SidebarFooter.styles";
 import {IoLogoLinkedin, IoLogoGithub, IoLogoTwitter} from "react-icons/io5"
+import {MdDarkMode} from 'react-icons/md'
 import { IconContext } from "react-icons";
 
 export default function SidebarFooter() {
-  const IconColor = '#427fac';
+  const IconColor = '#737373';
+  const ThemeToggleColor = '#dedede'
   return (
       <SidebarFooterContainer>
+        <FlexContainer>
         <Link href="#" passHref>
           <IconContext.Provider value={{className: 'SidebarFooterIcon', color: IconColor}}>
           <a className="SidebarFooterMenuItem"><IoLogoLinkedin/></a>
@@ -24,6 +27,14 @@ export default function SidebarFooter() {
             <a className="SidebarFooterMenuItem"><IoLogoTwitter/></a>
             </IconContext.Provider>
           </Link>
+      </FlexContainer>
+      
+      <ToggleThemeContainer>
+        <IconContext.Provider value={{className: 'FooterThemeIcon', color: ThemeToggleColor}}>
+          <button className="FooterThemeToggleBtn"><MdDarkMode/></button>   
+        </IconContext.Provider>
+      </ToggleThemeContainer>
     </SidebarFooterContainer>
+    
   )
 }

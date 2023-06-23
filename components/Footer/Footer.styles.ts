@@ -13,16 +13,13 @@ export const FooterContainer = styled.footer`
   }
 
   .FooterMenuItem {
+    cursor: pointer;
     padding-right: 1rem;
     font-size: 30px;
   }
 
-  .SidebarFooter {
-    background: red;
-  }
-
   .FooterIcon:hover {
-    fill: red;
+    fill: #427fac;
     transition: all 0.3s ease-in-out;
   }
 `;

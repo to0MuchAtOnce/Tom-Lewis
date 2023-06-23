@@ -27,6 +27,26 @@ export const HeaderContainer = styled.header`
   .MobileMenuItem:last-child {
     padding-right: 0em;
   }
+
+  .HeaderToggleThemeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #737373;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .HeaderToggleThemeButton:active {
+    scale: 0.9;
+  }
+
+  .HeaderThemeIcon:hover {
+    fill: yellow;
+  }
 `;
 
 export const FlexContainer = styled.div`
@@ -38,10 +58,11 @@ export const FlexContainer = styled.div`
 
 export const LogoContainer = styled.div`
   display: flex;
-  align-items: start;
 `;
 
 export const HeaderLinkContainer = styled.div`
+  display: flex;
+  align-items: center;
   align-items: center;
   list-style-type: none;
   @media (min-width: 1210px) {
