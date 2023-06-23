@@ -14,8 +14,31 @@ export const SidebarFooterContainer = styled.footer`
     font-size: 30px;
   }
 
+  .SidebarFooterMenuItem:last-child {
+    padding-right: 0;
+    font-size: 30px;
+  }
+
   .SidebarFooterIcon:hover {
     fill: red;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .FooterThemeToggleBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .FooterThemeToggleBtn:active {
+    scale: 0.9;
+  }
+
+  .FooterThemeIcon:hover {
+    fill: yellow;
     transition: all 0.3s ease-in-out;
   }
 `;
@@ -26,12 +49,7 @@ export const FlexContainer = styled.div`
   align-items: center;
 `;
 
-export const SidebarFooterLinkContainer = styled.div`
-  background: red;
-`;
-
 export const ToggleThemeContainer = styled.div`
   display: flex;
   justify-content: flex-end;
-  background: blue;
 `;
