@@ -1,4 +1,6 @@
 import Link from "next/link";
+import {MdDarkMode} from "react-icons/md"
+import { IconContext } from "react-icons";
 import {
   HeaderContainer,
   FlexContainer,
@@ -17,6 +19,7 @@ export default function Header() {
         <Link href="/photo"><a className="MobileMenuItem">Photo</a></Link>
         <Link href="/projects"><a className="MobileMenuItem">Projects</a></Link>
         <Link href="/about"><a className="MobileMenuItem">About</a></Link>
+        <span className="MobileMenuItem"><MdDarkMode/></span>
       </HeaderLinkContainer>
     </FlexContainer>
     </HeaderContainer>

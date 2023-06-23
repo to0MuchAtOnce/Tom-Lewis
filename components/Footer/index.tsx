@@ -1,7 +1,5 @@
 import Link from "next/link"
 import { FooterContainer } from "./Footer.styles";
-import { useMediaQuery } from 'react-responsive';
-
 import {IoLogoLinkedin, IoLogoGithub, IoLogoTwitter} from "react-icons/io5"
 import { IconContext } from "react-icons";
 
