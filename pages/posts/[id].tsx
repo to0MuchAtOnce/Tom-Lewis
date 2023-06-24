@@ -6,7 +6,7 @@ import Date from '../../components/Date';
 
 
 export const getStaticProps: GetStaticProps<PostProps> = async ({ params }) => {
-if (!params || typeof params.id !== 'string') {
+  if (!params || typeof params.id !== 'string') {
     return {
       notFound: true,
     };
@@ -32,19 +32,19 @@ interface PostProps {
   postData: PostData;
 }
 
-const Post: NextPage<PostProps> = ({postData}) => {
-  return ( 
+const Post: NextPage<PostProps> = ({ postData }) => {
+  return (
     <Container title={postData.title}>
       <h1 className='headingXl'>{postData.title}</h1>
       <article>
-      <br />
-      <div className='PostDate'>
-      <Date dateString={postData.date} />
-      </div>
-      <br />
-      <div className="postText" dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
+        <br />
+        <div className='PostDate'>
+          <Date dateString={postData.date} />
+        </div>
+        <br />
+        <div className="postText code" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-  </Container>
+    </Container>
   );
 };
 
