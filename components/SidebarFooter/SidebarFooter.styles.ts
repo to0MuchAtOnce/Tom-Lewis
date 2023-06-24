@@ -34,13 +34,8 @@ export const SidebarFooterContainer = styled.footer`
     margin: 0;
   }
 
-  .FooterThemeToggleBtn:active {
-    scale: 0.9;
-  }
-
-  .FooterThemeIcon:hover {
-    fill: yellow;
-    transition: all 0.3s ease-in-out;
+  .FooterThemeIcon {
+    fill: ${(props) => props.theme.colors.themeIcon};
   }
 `;
 

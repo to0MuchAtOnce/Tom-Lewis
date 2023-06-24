@@ -1,6 +1,6 @@
-import { DefaultTheme } from 'styled-components';
+import { DarkMode } from 'styled-components';
 
-export const theme: DefaultTheme = {
+export const DarkTheme: DarkMode = {
   colors: {
     primary: '#292a3b',
     secondary: '#dedede',
@@ -8,5 +8,7 @@ export const theme: DefaultTheme = {
     textLight: '#e4e4e4',
     mainBg: '#25292E',
     greyBg: '#d8dcd6',
+    themeBtn: '#737373',
+    themeIcon: '#eba93e',
   },
 };

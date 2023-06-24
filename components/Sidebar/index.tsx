@@ -3,10 +3,14 @@ import { MENU_ITEMS } from "../../constants/menu-items";
 import MenuItemsList from "../MenuItemsList";
 import SidebarFooter from "../SidebarFooter"
 
-import {LogoContainer} from "../Header/Header.styles";
+import { LogoContainer } from "../Header/Header.styles";
 import { SidebarFooterContainer } from "../SidebarFooter/SidebarFooter.styles";
 
-export default function Sidebar () {
+type SidebarProps = {
+  toggleTheme: () => void;
+};
+
+export default function Sidebar({ toggleTheme }: SidebarProps) {
   return (
     <SidebarContainer>
       <div>
@@ -14,8 +18,8 @@ export default function Sidebar () {
         <MenuItemsList options={MENU_ITEMS} />
       </div>
 
-       <SidebarFooterContainer>
-       <SidebarFooter/>   
+      <SidebarFooterContainer>
+        <SidebarFooter toggleTheme={toggleTheme} />
       </SidebarFooterContainer>
     </SidebarContainer>
   );
