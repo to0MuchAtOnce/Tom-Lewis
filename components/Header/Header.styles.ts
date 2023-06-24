@@ -4,6 +4,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 1em;
   padding-left: 16px;
   width: 100vw;
   max-width: 880px;
@@ -42,13 +43,6 @@ export const HeaderContainer = styled.header`
   .HeaderThemeIcon {
     fill: ${(props) => props.theme.colors.themeIcon};
   }
-`;
-
-export const FlexContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1em;
 `;
 
 export const LogoContainer = styled.div`
