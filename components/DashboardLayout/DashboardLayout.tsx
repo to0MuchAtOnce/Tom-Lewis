@@ -5,15 +5,16 @@ import { Container, Content, PageContainer } from "./DashboardLayout.styles";
 
 type DashboardLayoutProps = {
   children: React.ReactNode;
+  toggleTheme: () => void;
 };
 
-export default function DashboardLayout({ children }: DashboardLayoutProps) {
+export default function DashboardLayout({ children, toggleTheme }: DashboardLayoutProps) {
 
   return (
     <Container>
-      <Header/>
+      <Header toggleTheme={toggleTheme} />
       <Content>
-        <Sidebar/>
+        <Sidebar toggleTheme={toggleTheme} />
         <PageContainer>{children}</PageContainer>
       </Content>
       <Footer />

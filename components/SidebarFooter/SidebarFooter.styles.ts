@@ -35,7 +35,7 @@ export const SidebarFooterContainer = styled.footer`
   }
 
   .FooterThemeIcon {
-    color: ${(props) => props.theme.colors.secondary};
+    fill: ${(props) => props.theme.colors.themeIcon};
   }
 `;
 

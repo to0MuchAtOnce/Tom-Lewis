@@ -30,18 +30,17 @@ export const HeaderContainer = styled.header`
 
   .HeaderToggleThemeButton {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #737373;
+    background: ${(props) => props.theme.colors.themeBtn};
+    background: none;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 28px;
+    padding: 0;
     margin: 0;
   }
 
   .HeaderThemeIcon {
-    fill: ${(props) => props.theme.colors.secondary};
+    fill: ${(props) => props.theme.colors.themeIcon};
   }
 `;
 
