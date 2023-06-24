@@ -12,7 +12,7 @@ export const HeaderContainer = styled.header`
   background: ${(props) => props.theme.colors.mainBg};
   height: 50px;
   color: ${(props) => props.theme.colors.secondary};
-  @media (min-width: 1210px) {
+  @media (min-width: 1800px) {
     display: none;
     margin: 0;
   }
@@ -54,7 +54,4 @@ export const HeaderLinkContainer = styled.div`
   align-items: center;
   align-items: center;
   list-style-type: none;
-  @media (min-width: 1210px) {
-    display: none;
-  }
 `;
