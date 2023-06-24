@@ -40,12 +40,8 @@ export const HeaderContainer = styled.header`
     margin: 0;
   }
 
-  .HeaderToggleThemeButton:active {
-    scale: 0.9;
-  }
-
-  .HeaderThemeIcon:hover {
-    fill: yellow;
+  .HeaderThemeIcon {
+    fill: ${(props) => props.theme.colors.secondary};
   }
 `;
 
