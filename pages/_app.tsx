@@ -5,6 +5,9 @@ import DashboardLayout from "../components/DashboardLayout/DashboardLayout";
 import { ThemeProvider } from "styled-components";
 import { LightTheme } from "../styles/lightMode";
 import { DarkTheme } from "../styles/darkMode"
+import 'prismjs/themes/prism-tomorrow.css';
+
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState<typeof LightTheme>(LightTheme);
