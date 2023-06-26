@@ -17,17 +17,17 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   };
 };
 
-const Home: NextPage<HomeProps> = ({allPostsData}) => {
+const Home: NextPage<HomeProps> = ({ allPostsData }) => {
   return (
     <Container title="Blog">
-  <section>
+      <section>
         <h2 className="headingLg">Blog</h2>
         <ul className="list">
           {allPostsData.map(({ id, date, title }) => (
-            <h3 className="listItem flex" key={id}>
+            <h3 className="listItem" key={id}>
               <Link className="BlogLink" href={`/posts/${id}`}>{title}</Link>
               <br />
-            <small className="Date"> <Date dateString={date}/></small>
+              <small className="Date"> <Date dateString={date} /></small>
             </h3>
           ))}
         </ul>
