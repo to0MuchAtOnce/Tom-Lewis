@@ -3,6 +3,7 @@ import path from 'path';
 import matter, { GrayMatterFile } from 'gray-matter';
 import { remark } from 'remark';
 import remarkHtml from 'remark-html';
+import prism from 'remark-prism';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -27,7 +28,7 @@ export async function getSortedPostsData(): Promise<PostData[]> {
 
     const matterResult: GrayMatterFile<string> = matter(fileContents);
 
-    const processedContent = await remark().use(remarkHtml).process(matterResult.content);
+    const processedContent = await remark().use(remarkHtml, { sanitize: false }).use(prism).process(matterResult.content);
     const contentHtml = processedContent.toString();
 
     return {
@@ -67,7 +68,7 @@ export async function getPostData(id: string) {
   const matterResult: GrayMatterFile<string> = matter(fileContents);
 
   // Use remark to convert markdown into HTML string
-  const processedContent = await remark().use(remarkHtml).process(matterResult.content);
+  const processedContent = await remark().use(remarkHtml, { sanitize: false }).use(prism).process(matterResult.content);
   const contentHtml = processedContent.toString();
 
   // Combine the data with the id

@@ -42,7 +42,7 @@ const Post: NextPage<PostProps> = ({ postData }) => {
           <Date dateString={postData.date} />
         </div>
         <br />
-        <div className="postText code" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="postText" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Container>
   );
