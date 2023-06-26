@@ -8,7 +8,7 @@ export const FooterContainer = styled.footer`
   height: 50px;
   color: ${(props) => props.theme.colors.secondary};
 
-  @media (min-width: 1210px) {
+  @media (min-width: 1580px) {
     display: none;
   }
 

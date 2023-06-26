@@ -15,7 +15,7 @@ export const SidebarContainer = styled.aside`
   justify-content: space-between;
   flex-direction: column;
   border-right: 0.1px solid #686868;
-  @media (max-width: 1800px) {
+  @media (max-width: 1580px) {
     display: none;
   }
 `;
