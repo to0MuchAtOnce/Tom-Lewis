@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
 import Container from "../../components/Container";
 import Date from '../../components/Date';
-import { PostContainer } from '../posts/Markdown.styles'
+import { PostContainer } from '../../styles/Markdown.styles'
 
 
 export const getStaticProps: GetStaticProps<PostProps> = async ({ params }) => {
