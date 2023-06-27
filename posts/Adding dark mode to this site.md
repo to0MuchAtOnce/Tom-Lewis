@@ -2,11 +2,12 @@
 title: 'Adding dark mode to this site'
 date: '2020-01-01'
 ---
+
 I managed to implement dark mode on the website by creating a state variable to track the current theme in **_app.tsx** using the **useState** hook. The **theme** variable holds the current theme and updates it accordingly. Meaning; if the theme is set to **LightTheme** it will be set to **DarkTheme** when triggered, and vice versa. I initialised it with the default app theme, **LightTheme** and then passed it as a prop to**DashboardLayout.tsx**.
 
 Inside the **ThemeProvider** component the **theme** variable is passed as the value for the theme, making the theme variable avalible throughout the component tree, allowing all other components to access and use the theme.
 
-**_app.tsx**
+### _app.tsx
 ```tsx
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
@@ -32,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 export default MyApp;
 ```
 
-Inside the **DashboardLayout** component I added the **toggleThem** function as a prop. Allowing it to be passed down to child components, like the header or the sidebar, where the theme toggle buttons live.
+ Inside the **DashboardLayout** component I added the **toggleThem** function as a prop. Allowing it to be passed down to child components, like the header or the sidebar, where the theme toggle buttons live.
 
 **DashboardLayout.tsx**
 ```tsx
@@ -65,7 +66,7 @@ I added the **toggleTheme** to the **HeaderProps** type to include the **toggleT
 
 This then triggers a re-render of the components wrapped in the **ThemeProvider**, updating the app and applying the new theme to the styled components.
 
-**Header/index.tsx**
+### Header/index.tsx
 ```tsx
 type HeaderProps = {
   toggleTheme: () => void;
