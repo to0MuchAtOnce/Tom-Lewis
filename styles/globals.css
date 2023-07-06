@@ -75,11 +75,11 @@ a {
   letter-spacing: 0.1px;
 }
 
-.FooterIcon {
+.footerIconColor {
   color: #737373;
 }
 
-.FooterIcon:hover {
+.footerIconColor:hover {
   color: var(--accent-color);
 }
 

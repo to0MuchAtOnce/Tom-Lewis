@@ -17,11 +17,6 @@ export const FooterContainer = styled.footer`
     padding-right: 1rem;
     font-size: 30px;
   }
-
-  .FooterIcon:hover {
-    fill: #427fac;
-    transition: all 0.3s ease-in-out;
-  }
 `;
 
 export const FooterLinkContainer = styled.div``;

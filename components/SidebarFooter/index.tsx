@@ -14,22 +14,16 @@ export default function SidebarFooter({ toggleTheme }: SidebarFooterProps) {
   return (
     <SidebarFooterContainer>
       <FlexContainer>
-        <Link href="#" passHref>
-          <IconContext.Provider value={{ className: 'SidebarFooterIcon', color: IconColor }}>
-            <a className="SidebarFooterMenuItem"><IoLogoLinkedin /></a>
-          </IconContext.Provider>
+        <Link href="https://www.linkedin.com/in/tom-lewis-a42566202/">
+          <a className="SidebarFooterMenuItem footerIconColor" target="_blank"><IoLogoLinkedin /></a>
         </Link>
 
-        <Link href="#" passHref>
-          <IconContext.Provider value={{ className: 'SidebarFooterIcon', color: IconColor }}>
-            <a className="SidebarFooterMenuItem"><IoLogoGithub /></a>
-          </IconContext.Provider>
+        <Link href="https://github.com/to0MuchAtOnce/">
+          <a className="SidebarFooterMenuItem footerIconColor" target="_blank"><IoLogoGithub /></a>
         </Link>
 
-        <Link href="#" passHref>
-          <IconContext.Provider value={{ className: 'SidebarFooterIcon', color: IconColor }}>
-            <a className="SidebarFooterMenuItem"><IoLogoTwitter /></a>
-          </IconContext.Provider>
+        <Link href="#">
+          <a className="SidebarFooterMenuItem footerIconColor"><IoLogoTwitter /></a>
         </Link>
       </FlexContainer>
 
