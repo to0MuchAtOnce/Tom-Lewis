@@ -1,4 +1,4 @@
-# Next.js Dashboard Layout template (with Styled Components)
+# Portfolio Site with next.js & Typscript
 
 Starter code with the implementation of:
 
