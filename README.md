@@ -14,22 +14,7 @@ Starter code with the implementation of:
 - Styled Components v.5
 - Styled Icons (Material) v.10
 
-### Menu
-
-To change (add/remove) menu options, open `constants/menu-items.ts` file, and edit **MENU_OPTIONS** variable by updating a name, url and icon props. Any menu item can have nested options (_subItems_ array). There is no menu depth limit (although some additional styling might require for 3+ levels). The template will generate a menu structure automatically based on the provided **MENU_OPTIONS**.
-
-### Theme
-
-To add/remove/change any theme colors (or add any other theme props, like font-size, border-radius, spacing, etc.) edit `styled.d.ts` file to have type safety, and `styles/theme.ts`.
-
 ## Getting Started
-
-1. Get the latest version:
-
-```bash
-git clone https://github.com/KaterinaLupacheva/nextjs-dashboard-layout.git
-cd nextjs-dashboard-layout
-```
 
 2. Run
 
@@ -44,7 +29,3 @@ npm run dev
 ```
 
 4. Open http://localhost:3000 to view it in the browser.
-
-## How to create from scratch
-
-I wrote the blog post on how to create the Dashboard layout. You can read it [here](https://ramonak.io/posts/nextjs-dashboard-layout).
