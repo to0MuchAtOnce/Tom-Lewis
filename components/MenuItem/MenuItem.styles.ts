@@ -4,9 +4,10 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   display: flex;
   flex-direction: row;
   font-size: 16px;
-  padding: 10px 0px 10px 10px;
+  padding: 10px 0px 10px 5px;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid ${(props) => props.theme.colors.sidebarBorder};
 
   & svg {
     height: 30px;
@@ -14,9 +15,8 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   }
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.mainBg};
+    background-color: ${(props) => props.theme.colors.accent};
     color: ${(props) => props.theme.colors.secondary};
-    opacity: 0.5;
     cursor: pointer;
   }
 

@@ -12,6 +12,7 @@ declare module 'styled-components' {
       themeBtn: string;
       themeIcon: string;
       accent: string;
+      sidebarBorder: string;
     };
   }
 }
@@ -28,6 +29,7 @@ declare module 'styled-components' {
       themeBtn: string;
       themeIcon: string;
       accent: string;
+      sidebarBorder: string;
     };
   }
 }

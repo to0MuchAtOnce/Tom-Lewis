@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 export const SidebarContainer = styled.aside`
   background: ${(props) => props.theme.colors.mainBg};
-  min-width: 350px;
-  max-width: 350px;
+  min-width: 200px;
   overflow: hidden;
   display: flex;
   position: fixed;
@@ -11,10 +10,9 @@ export const SidebarContainer = styled.aside`
   bottom: 0;
   left: 0;
   margin: 0 4rem 0 0;
-  padding: 0 10px;
   justify-content: space-between;
   flex-direction: column;
-  border-right: 0.1px solid #686868;
+  border-right: 0.1px solid ${(props) => props.theme.colors.sidebarBorder};
   @media (max-width: 1580px) {
     display: none;
   }

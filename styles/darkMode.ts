@@ -11,5 +11,6 @@ export const DarkTheme: DarkMode = {
     themeBtn: '#737373',
     themeIcon: '#eba93e',
     accent: '#4e7fc5',
+    sidebarBorder: '#686868',
   },
 };
