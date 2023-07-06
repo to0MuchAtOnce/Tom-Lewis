@@ -10,5 +10,6 @@ export const DarkTheme: DarkMode = {
     greyBg: '#d8dcd6',
     themeBtn: '#737373',
     themeIcon: '#eba93e',
+    accent: '#4e7fc5',
   },
 };

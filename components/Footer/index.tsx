@@ -1,29 +1,21 @@
 import Link from "next/link"
 import { FooterContainer } from "./Footer.styles";
-import {IoLogoLinkedin, IoLogoGithub, IoLogoTwitter} from "react-icons/io5"
-import { IconContext } from "react-icons";
+import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
 
 export default function Footer() {
-  const IconColor = '#737373';
   return (
-  <FooterContainer>
-        <Link href="#" passHref>
-          <IconContext.Provider value={{className: 'FooterIcon', color: IconColor}}>
-          <a className="FooterMenuItem"><IoLogoLinkedin/></a>
-          </IconContext.Provider>
-        </Link>
+    <FooterContainer>
+      <Link href="https://www.linkedin.com/in/tom-lewis-a42566202/" passHref>
+        <a target="_blank" className="FooterMenuItem FooterIcon"><IoLogoLinkedin /></a>
+      </Link>
 
-          <Link href="#" passHref>
-            <IconContext.Provider value={{className: 'FooterIcon', color: IconColor}}>
-            <a className="FooterMenuItem"><IoLogoGithub/></a> 
-            </IconContext.Provider>
-          </Link>
-        
-          <Link href="#" passHref>
-            <IconContext.Provider value={{className: 'FooterIcon', color: IconColor}}>
-            <a className="FooterMenuItem"><IoLogoTwitter/></a>
-            </IconContext.Provider>
-          </Link>
-  </FooterContainer>
+      <Link href="https://github.com/to0MuchAtOnce/" passHref>
+        <a target='_blank' className="FooterMenuItem FooterIcon"><IoLogoGithub /></a>
+      </Link>
+
+      <Link href="#" passHref>
+        <a className="FooterMenuItem FooterIcon"><IoLogoTwitter /></a>
+      </Link>
+    </FooterContainer >
   )
 }

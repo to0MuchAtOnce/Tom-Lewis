@@ -11,6 +11,7 @@ declare module 'styled-components' {
       greyBg: string;
       themeBtn: string;
       themeIcon: string;
+      accent: string;
     };
   }
 }
@@ -26,6 +27,7 @@ declare module 'styled-components' {
       greyBg: string;
       themeBtn: string;
       themeIcon: string;
+      accent: string;
     };
   }
 }

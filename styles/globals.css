@@ -1,3 +1,8 @@
+:root {
+  --accent-color: #4e7fc5;
+  --accent-hover: #737373;
+}
+
 html,
 body {
   padding: 0;
@@ -59,10 +64,6 @@ a {
   margin: 0 0 1.25rem;
 }
 
-.Date {
-  color: #4e7fc5;
-}
-
 .PostDate {
   display: block;
   color: #959595;
@@ -72,6 +73,14 @@ a {
   white-space: normal;
   word-wrap: break-word;
   letter-spacing: 0.1px;
+}
+
+.FooterIcon {
+  color: #737373;
+}
+
+.FooterIcon:hover {
+  color: var(--accent-color);
 }
 
 @media (max-width: 700px) {
