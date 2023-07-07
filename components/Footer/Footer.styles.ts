@@ -4,11 +4,11 @@ export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${(props) => props.theme.colors.mainBg};
+  background: ${(props) => props.theme.mainBg};
   height: 50px;
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.secondary};
 
-  @media (min-width: 1580px) {
+  @media (min-width: 1440px) {
     display: none;
   }
 

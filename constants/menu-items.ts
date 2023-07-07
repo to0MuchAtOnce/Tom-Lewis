@@ -6,12 +6,8 @@ const MENU_OPTIONS: MenuOption[] = [
     url: '/',
     subItems: [
       {
-        name: 'When to Use Static Generation v.s. Server-side Rendering',
-        url: '/posts/ssg-ssr',
-      },
-      {
-        name: 'Two Forms of Pre-rendering',
-        url: '/posts/pre-rendering',
+        name: 'Adding dark mode to this site',
+        url: '/posts/Adding dark mode to this site',
       },
     ],
   },

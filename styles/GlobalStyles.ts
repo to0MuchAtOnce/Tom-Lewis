@@ -1,22 +1,27 @@
-:root {
-  --accent-color: #4e7fc5;
-  --accent-hover: #737373;
+import { createGlobalStyle, Theme } from 'styled-components';
+
+interface GlobalStylesProps {
+  theme: Theme;
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
+* {
+  box-sizing: border-box;
+}
+
+  html,
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: ${(props) => props.theme.mainBg};
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .headingXl {
@@ -93,3 +98,4 @@ a {
     color: #959595;
   }
 }
+`;

@@ -7,16 +7,17 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   padding: 10px 0px 10px 5px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid ${(props) => props.theme.colors.sidebarBorder};
+  border-bottom: 0.5px solid ${(props) => props.theme.sidebarBorder};
 
   & svg {
-    height: 30px;
+    height: 20px;
     margin-right: 10px;
+    color: ${(props) => props.theme.sidebarBorder};
   }
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.accent};
-    color: ${(props) => props.theme.colors.secondary};
+    background-color: ${(props) => props.theme.accent};
+    color: ${(props) => props.theme.secondary};
     cursor: pointer;
   }
 
@@ -28,7 +29,7 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   }
 
   &.selected {
-    background-color: ${(props) => props.theme.colors.mainBg};
-    color: ${(props) => props.theme.colors.textLight};
+    background-color: ${(props) => props.theme.mainBg};
+    color: ${(props) => props.theme.textLight};
   }
 `;

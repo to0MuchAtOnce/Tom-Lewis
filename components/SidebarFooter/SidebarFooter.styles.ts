@@ -6,8 +6,8 @@ export const SidebarFooterContainer = styled.footer`
   justify-content: space-between;
   padding-bottom: 0.2em;
   width: 100%;
-  background: ${(props) => props.theme.colors.mainBg};
-  color: ${(props) => props.theme.colors.secondary};
+  background: ${(props) => props.theme.mainBg};
+  color: ${(props) => props.theme.secondary};
 
   .SidebarFooterMenuItem {
     cursor: pointer;
@@ -35,7 +35,7 @@ export const SidebarFooterContainer = styled.footer`
   }
 
   .FooterThemeIcon {
-    fill: ${(props) => props.theme.colors.themeIcon};
+    fill: ${(props) => props.theme.themeIcon};
   }
 `;
 
