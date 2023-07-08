@@ -4,7 +4,7 @@ export const SidebarFooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 0.2em;
+  padding: 0 0.2em 0.1rem;
   width: 100%;
   background: ${(props) => props.theme.mainBg};
   color: ${(props) => props.theme.secondary};
@@ -13,6 +13,7 @@ export const SidebarFooterContainer = styled.footer`
     cursor: pointer;
     padding-right: 1rem;
     font-size: 30px;
+    fill: ${(props) => props.theme.accent};
   }
 
   .SidebarFooterMenuItem:last-child {
@@ -21,7 +22,6 @@ export const SidebarFooterContainer = styled.footer`
   }
 
   .SidebarFooterIcon:hover {
-    fill: #427fac;
     transition: all 0.3s ease-in-out;
   }
 
@@ -36,6 +36,10 @@ export const SidebarFooterContainer = styled.footer`
 
   .FooterThemeIcon {
     fill: ${(props) => props.theme.themeIcon};
+  }
+
+  .FooterThemeIcon:hover {
+    fill: ${(props) => props.theme.accent};
   }
 `;
 

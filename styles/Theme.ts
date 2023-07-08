@@ -10,8 +10,10 @@ declare module 'styled-components' {
     greyBg: string;
     themeBtn: string;
     themeIcon: string;
+    sidebarborder: string;
     accent: string;
-    sidebarBorder: string;
+    footerIcon: string;
+    footerIconHover: string;
   }
 }
 
@@ -24,8 +26,10 @@ export const LightTheme: DefaultTheme = {
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#eba93e',
-  accent: '#4e7fc5',
-  sidebarBorder: '#686868',
+  sidebarBorder: '#b1b1b1',
+  accent: '#6590ab',
+  footerIcon: '#737373',
+  footerIconHover: '#4c96c1',
 };
 
 export const DarkTheme: DefaultTheme = {
@@ -37,6 +41,8 @@ export const DarkTheme: DefaultTheme = {
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#eba93e',
-  accent: '#4e7fc5',
-  sidebarBorder: '#686868',
+  sidebarBorder: '#5e5e5e',
+  accent: '#6590ab',
+  footerIcon: '#737373',
+  footerIconHover: '#4c96c1',
 };

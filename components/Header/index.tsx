@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { MdDarkMode } from "react-icons/md";
 import { IconContext } from "react-icons";
 import {
@@ -12,33 +13,36 @@ type HeaderProps = {
 };
 
 export default function Header({ toggleTheme }: HeaderProps) {
-  const ThemeToggleColor = "#dedede";
-
+  const router = useRouter();
   return (
     <HeaderContainer>
       <LogoContainer>Logo</LogoContainer>
 
-      <HeaderLinkContainer className="MobileMenuWrapper">
+      <HeaderLinkContainer>
         <Link href="/">
-          <a className="MobileMenuItem">Blog</a>
+          <a className={`MobileMenuItem ${router.pathname === "/" ? "selected" : ""
+            }`}>Blog</a>
         </Link>
         <Link href="/photo">
-          <a className="MobileMenuItem">Photo</a>
+          <a className={`MobileMenuItem ${router.pathname === "/photo" ? "selected" : ""
+            }`}>Photo</a>
         </Link>
         <Link href="/projects">
-          <a className="MobileMenuItem">Projects</a>
+          <a className={`MobileMenuItem ${router.pathname === "/projects" ? "selected" : ""
+            }`}>Projects</a>
         </Link>
         <Link href="/about">
-          <a className="MobileMenuItem">About</a>
+          <a className={`MobileMenuItem ${router.pathname === "/about" ? "selected" : ""
+            }`}>About</a>
         </Link>
         <IconContext.Provider
-          value={{ className: "HeaderThemeIcon", color: ThemeToggleColor }}
+          value={{ className: "HeaderThemeIcon" }}
         >
           <button className="HeaderToggleThemeButton" onClick={toggleTheme}>
             <MdDarkMode />
           </button>
         </IconContext.Provider>
       </HeaderLinkContainer>
-    </HeaderContainer>
+    </HeaderContainer >
   );
 }

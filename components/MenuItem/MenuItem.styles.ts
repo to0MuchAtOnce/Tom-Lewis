@@ -4,10 +4,9 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   display: flex;
   flex-direction: row;
   font-size: 16px;
-  padding: 10px 0px 10px 5px;
+  padding: 10px 0px 5px 10px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.5px solid ${(props) => props.theme.sidebarBorder};
 
   & svg {
     height: 20px;
@@ -16,9 +15,9 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   }
 
   &:hover {
-    background-color: ${(props) => props.theme.accent};
-    color: ${(props) => props.theme.secondary};
+    color: ${(props) => props.theme.accent};
     cursor: pointer;
+    text-decoration: underline;
   }
 
   .menu-item {
@@ -29,7 +28,6 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   }
 
   &.selected {
-    background-color: ${(props) => props.theme.mainBg};
-    color: ${(props) => props.theme.textLight};
+    color: ${(props) => props.theme.accent};
   }
 `;

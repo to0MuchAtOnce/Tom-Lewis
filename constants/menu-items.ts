@@ -60,7 +60,7 @@ function makeMenuLevel(options: MenuOption[], depth = 0): MenuItem[] {
     ...option,
     id: depth === 0 ? idx.toString() : `${depth}.${idx}`,
     depth,
-    subItems: option.subItems && option.subItems.length > 0 ? makeMenuLevel(option.subItems, depth + 1) : undefined,
+    subItems: option.subItems && option.subItems.length > 0 ? makeMenuLevel(option.subItems, depth + 0.5) : undefined,
   }));
 }
 

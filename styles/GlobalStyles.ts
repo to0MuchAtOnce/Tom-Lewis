@@ -81,11 +81,11 @@ a {
 }
 
 .footerIconColor {
-  color: #737373;
+color: ${(props) => props.theme.footerIcon};
 }
 
 .footerIconColor:hover {
-  color: var(--accent-color);
+  color: ${(props) => props.theme.footerIconHover};
 }
 
 @media (max-width: 700px) {

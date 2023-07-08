@@ -22,6 +22,7 @@ export const HeaderContainer = styled.header`
   }
 
   .MobileMenuItem:hover {
+    color: ${(props) => props.theme.accent};
     text-decoration: underline;
   }
 
@@ -54,4 +55,8 @@ export const HeaderLinkContainer = styled.div`
   align-items: center;
   align-items: center;
   list-style-type: none;
+
+  .selected {
+    color: ${(props) => props.theme.accent};
+  }
 `;
