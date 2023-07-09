@@ -3,7 +3,7 @@ title: 'Implementing a theme switcher'
 date: '2023-06-20'
 ---
 
-These days more and more websites are offering dark mode. I personally look for it on every site I visit, that’s if it’s not already the only theme available. For my site I wanted to give the user a choice of theme based on their preference. In this tutorial I’ll show you how I implemented a theme switcher for this site which saves the selected theme to localStorage for the next time the you visit.
+These days more and more websites are offering dark mode. I personally look for it on every site I visit, that’s if it’s not already the only theme available. For my site I wanted to give the user a choice of theme based on their preference. In this tutorial I’ll show you how I implemented a theme switcher for this site which saves the selected theme to localStorage for the next time you visit.
 
 I began by creating a state variable to track the current theme in `_app.tsx` using the `useState` hook. The `theme` variable holds the current theme and updates it accordingly. When triggered, if the theme is set to `LightTheme` it will be set to `DarkTheme`, and vice versa. I initialised it with the default app theme, `LightTheme` and then passed it as a prop to`DashboardLayout.tsx`.
 
