@@ -1,9 +1,11 @@
 ---
-title: 'Adding dark mode to this site'
-date: '2023-05-20'
+title: 'Implementing a theme switcher'
+date: '2023-06-20'
 ---
 
-I managed to implement dark mode on the website by creating a state variable to track the current theme in **_app.tsx** using the **useState** hook. The **theme** variable holds the current theme and updates it accordingly, meaning that if the theme is set to **LightTheme** it will be set to **DarkTheme** when triggered, and vice versa. I initialised it with the default app theme, **LightTheme** and then passed it as a prop to**DashboardLayout.tsx**.
+These days more and more websites are offering dark mode on their websites. I personally look for it on every site I visit, that’s if it’s not already the only theme avalible. For my site I wanted to give the choice of having dark or light mode based on the user preference. In this tutorial I’ll show you how I implemented a theme switcher for my site which saves the selected theme to localStorage for the next time the user visits the site.
+
+I managed to implement dark mode on the website by creating a state variable to track the current theme in **_app.tsx** using the **useState** hook. The **theme** variable holds the current theme and updates it accordingly, meaning that if the theme is set to **LightTheme** it will be set to **DarkTheme** when triggered, and vice versa. I initialised it with the default app theme, **LightTheme** and then passed it as a prop to **DashboardLayout.tsx**.
 
 Inside the **ThemeProvider** component the **theme** variable is passed as the value for the theme; making it avalible throughout the component tree, allowing all other components to access and use the theme.
 
