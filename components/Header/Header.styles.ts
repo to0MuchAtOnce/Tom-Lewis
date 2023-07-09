@@ -58,5 +58,6 @@ export const HeaderLinkContainer = styled.div`
 
   .selected {
     color: ${(props) => props.theme.accent};
+    text-decoration: underline;
   }
 `;
