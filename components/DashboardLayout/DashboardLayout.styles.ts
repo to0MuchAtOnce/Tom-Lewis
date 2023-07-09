@@ -5,8 +5,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: ${(props) => props.theme.colors.mainBg};
-  color: ${(props) => props.theme.colors.textDark};
+  background-color: ${(props) => props.theme.mainBg};
+  color: ${(props) => props.theme.textDark};
 `;
 
 export const Content = styled.div`

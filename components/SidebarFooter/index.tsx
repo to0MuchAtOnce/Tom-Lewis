@@ -9,8 +9,6 @@ type SidebarFooterProps = {
 };
 
 export default function SidebarFooter({ toggleTheme }: SidebarFooterProps) {
-  const IconColor = '#737373';
-  const ThemeToggleColor = '#dedede'
   return (
     <SidebarFooterContainer>
       <FlexContainer>
@@ -28,7 +26,7 @@ export default function SidebarFooter({ toggleTheme }: SidebarFooterProps) {
       </FlexContainer>
 
       <ToggleThemeContainer>
-        <IconContext.Provider value={{ className: 'FooterThemeIcon', color: ThemeToggleColor }}>
+        <IconContext.Provider value={{ className: 'FooterThemeIcon' }}>
           <button className="FooterThemeToggleBtn" onClick={toggleTheme}><MdDarkMode /></button>
         </IconContext.Provider>
       </ToggleThemeContainer>

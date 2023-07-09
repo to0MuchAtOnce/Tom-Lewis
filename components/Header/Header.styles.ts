@@ -9,10 +9,10 @@ export const HeaderContainer = styled.header`
   width: 100vw;
   max-width: 880px;
   margin: 0 auto;
-  background: ${(props) => props.theme.colors.mainBg};
+  background: ${(props) => props.theme.mainBg};
   height: 50px;
-  color: ${(props) => props.theme.colors.secondary};
-  @media (min-width: 1800px) {
+  color: ${(props) => props.theme.secondary};
+  @media (min-width: 1440px) {
     display: none;
     margin: 0;
   }
@@ -22,6 +22,7 @@ export const HeaderContainer = styled.header`
   }
 
   .MobileMenuItem:hover {
+    color: ${(props) => props.theme.accent};
     text-decoration: underline;
   }
 
@@ -31,7 +32,7 @@ export const HeaderContainer = styled.header`
 
   .HeaderToggleThemeButton {
     display: flex;
-    background: ${(props) => props.theme.colors.themeBtn};
+    background: ${(props) => props.theme.themeBtn};
     background: none;
     border: none;
     cursor: pointer;
@@ -41,7 +42,7 @@ export const HeaderContainer = styled.header`
   }
 
   .HeaderThemeIcon {
-    fill: ${(props) => props.theme.colors.themeIcon};
+    fill: ${(props) => props.theme.themeIcon};
   }
 `;
 
@@ -54,4 +55,9 @@ export const HeaderLinkContainer = styled.div`
   align-items: center;
   align-items: center;
   list-style-type: none;
+
+  .selected {
+    color: ${(props) => props.theme.accent};
+    text-decoration: underline;
+  }
 `;

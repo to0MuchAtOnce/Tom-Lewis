@@ -1,21 +1,25 @@
 import styled from 'styled-components';
 
 export const SidebarContainer = styled.aside`
-  background: ${(props) => props.theme.colors.mainBg};
-  min-width: 350px;
-  max-width: 350px;
+  background: ${(props) => props.theme.mainBg};
+  min-width: 250px;
+  max-width: 250px;
   overflow: hidden;
   display: flex;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  margin: 0 4rem 0 0;
-  padding: 0 10px;
+  margin: 0 1rem 0 0;
   justify-content: space-between;
   flex-direction: column;
-  border-right: 0.1px solid #686868;
-  @media (max-width: 1580px) {
+  border-right: 0.1px solid ${(props) => props.theme.sidebarBorder};
+  @media (max-width: 1440px) {
     display: none;
+  }
+
+  .logo {
+    display: flex;
+    padding: 1rem;
   }
 `;
