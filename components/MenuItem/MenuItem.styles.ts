@@ -30,5 +30,6 @@ export const MenuItemContainer = styled.a<{ depth: number }>`
   &.selected {
     color: ${(props) => props.theme.accent};
     text-decoration: underline;
+    font-weight: 500;
   }
 `;

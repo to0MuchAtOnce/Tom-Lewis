@@ -16,9 +16,15 @@ export const HeaderContainer = styled.header`
     display: none;
     margin: 0;
   }
+  @media (max-width: 435px) {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
 
   .MobileMenuItem {
-    padding-right: 1em;
+    font-weight: 500;
+    margin-right: 1em;
   }
 
   .MobileMenuItem:hover {
@@ -46,10 +52,6 @@ export const HeaderContainer = styled.header`
   }
 `;
 
-export const LogoContainer = styled.div`
-  display: flex;
-`;
-
 export const HeaderLinkContainer = styled.div`
   display: flex;
   align-items: center;
@@ -58,6 +60,38 @@ export const HeaderLinkContainer = styled.div`
 
   .selected {
     color: ${(props) => props.theme.accent};
+    font-weight: 500;
     text-decoration: underline;
+  }
+`;
+
+export const SidebarLogo = styled.div`
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px;
+
+  .LogoFullStop {
+    font-size: 1.5rem;
+    color: ${(props) => props.theme.accent};
+    font-weight: 900;
+    padding-left: 3px;
+  }
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  .LogoFullStop {
+    font-size: 1.5rem;
+    color: ${(props) => props.theme.accent};
+    font-weight: 900;
+    padding-left: 3px;
+  }
+
+  @media (max-width: 435px) {
+    display: none;
   }
 `;

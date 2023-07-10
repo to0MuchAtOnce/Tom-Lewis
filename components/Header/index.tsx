@@ -16,7 +16,7 @@ export default function Header({ toggleTheme }: HeaderProps) {
   const router = useRouter();
   return (
     <HeaderContainer>
-      <LogoContainer>Logo</LogoContainer>
+      <LogoContainer><span className="LogoSidebarPad">Tom Lewis</span><span className="LogoFullStop">.</span></LogoContainer>
 
       <HeaderLinkContainer>
         <Link href="/">
