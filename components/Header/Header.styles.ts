@@ -16,7 +16,7 @@ export const HeaderContainer = styled.header`
     display: none;
     margin: 0;
   }
-  @media (max-width: 435px) {
+  @media (max-width: 445px) {
     display: flex;
     justify-content: right;
     align-items: center;
@@ -91,7 +91,7 @@ export const LogoContainer = styled.div`
     padding-left: 3px;
   }
 
-  @media (max-width: 435px) {
+  @media (max-width: 445px) {
     display: none;
   }
 `;
