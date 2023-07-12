@@ -41,19 +41,11 @@ const Photo: NextPage<ImageProps> = ({ images, nextCursor }) => {
 
 export default Photo;
 
-interface Resource {
-  asset_id: string;
-  public_id: string;
-  secure_url: string;
-  width: number;
-  height: number;
-}
-
 export async function getStaticProps() {
   const results = await search();
 
   const { resources, next_cursor: nextCursor } = results;
-  // console.log("results", results)
+
   const images = mapImageResources(resources);
 
   return {
