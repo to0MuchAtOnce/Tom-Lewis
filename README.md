@@ -14,7 +14,7 @@ I made this site to display my skills as I develop as a web developer. Here's a 
 - Styled Components v.5
 - Styled Icons (Material) v.10
 
-##Interested in how it works?
+## Interested in how it works?
 
 1. Clone the site:
 
