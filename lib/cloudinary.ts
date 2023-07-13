@@ -24,7 +24,7 @@ export async function search(options?: Options): Promise<Params> {
     },
   }).then((res) => res.json());
 
-  return results;
+  return results || {};
 }
 
 interface Resource {
