@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Container from "../components/Container";
 import { search, mapImageResources } from "../lib/cloudinary";
 
-type Image = {
+type CustomImage = {
   id: string;
   title: string;
   width: number;
@@ -13,15 +13,13 @@ type Image = {
 };
 
 type ImageProps = {
-  images: Image[];
+  images: CustomImage[];
   nextCursor: string;
 };
 
 const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaultNextCursor }) => {
-  const [images, setImages] = useState<Image[]>(defaultImages);
+  const [images, setImages] = useState<CustomImage[]>(defaultImages);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
-  console.log('nextCursor', nextCursor)
-  console.log('images', images)
 
   async function handleLoadMore(event: MouseEvent<HTMLButtonElement>): Promise<void> {
     event.preventDefault();
@@ -33,12 +31,12 @@ const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaul
     }).then(res => res.json())
     const { resources, next_cursor: updatedNextCursor } = results;
 
-    const images = mapImageResources(resources);
+    const mappedImages = mapImageResources(resources);
 
     setImages(prev => {
       return [
         ...prev,
-        ...images
+        ...mappedImages
       ]
     })
 
@@ -48,7 +46,7 @@ const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaul
   return (
     <Container title="Photo">
       <div className="headingLg">Photos</div>
-      {images.map((image: Image) => {
+      {images.map((image: CustomImage) => {
         return (
           <div key={image.id}>
             <a>
