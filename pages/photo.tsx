@@ -46,7 +46,7 @@ const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaul
   return (
     <Container title="Photo">
       <div className="headingLg">Photos</div>
-      {images && images.map((image: CustomImage) => {
+      {images.map((image: CustomImage) => {
         return (
           <div key={image.id}>
             <a>
