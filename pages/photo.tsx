@@ -7,7 +7,6 @@ import { search, mapImageResources } from "../lib/cloudinary";
 type Image = {
   id: string;
   title: string;
-  link: string;
   width: number;
   height: number;
   image: string;
@@ -52,7 +51,7 @@ const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaul
       {images.map((image: Image) => {
         return (
           <div key={image.id}>
-            <a href={image.link}>
+            <a>
               <Image
                 width={image.width} height={image.height} src={image.image} alt=""
               />
