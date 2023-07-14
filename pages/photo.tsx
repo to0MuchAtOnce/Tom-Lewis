@@ -18,35 +18,43 @@ type ImageProps = {
 };
 
 const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaultNextCursor }) => {
-  const [images, setImages] = useState<CustomImage[]>(defaultImages);
+  const [images, setImages] = useState<CustomImage[]>(defaultImages ?? []);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
+  const [error, setError] = useState<string | null>(null);
+
 
   async function handleLoadMore(event: MouseEvent<HTMLButtonElement>): Promise<void> {
     event.preventDefault();
-    const results = await fetch('/api/search', {
-      method: 'POST',
-      body: JSON.stringify({
-        nextCursor
-      })
-    }).then(res => res.json())
-    const { resources, next_cursor: updatedNextCursor } = results;
 
-    const mappedImages = mapImageResources(resources);
+    try {
+      const response = await fetch('/api/search', {
+        method: 'POST',
+        body: JSON.stringify({
+          nextCursor
+        })
+      });
 
-    setImages(prev => {
-      return [
-        ...prev,
-        ...mappedImages
-      ]
-    })
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
 
-    setNextCursor(updatedNextCursor);
+      const results = await response.json();
+      const { resources, next_cursor: updatedNextCursor } = results;
+      const mappedImages = mapImageResources(resources);
+
+      setImages(prev => [...prev, ...mappedImages]);
+      setNextCursor(updatedNextCursor);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setError('An error occurred while fetching data. Please try again.');
+    }
   }
+
 
   return (
     <Container title="Photo">
       <div className="headingLg">Photos</div>
-      {images && Array.isArray(images) && images.map((image: CustomImage) => {
+      {images?.map((image: CustomImage) => {
         return (
           <div key={image.id}>
             <a>
