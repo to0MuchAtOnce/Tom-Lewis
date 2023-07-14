@@ -76,7 +76,6 @@ a {
 
 .postText {
   white-space: normal;
-  word-wrap: break-word;
   letter-spacing: 0.1px;
 }
 

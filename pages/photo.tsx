@@ -1,65 +1,93 @@
+import { useState, MouseEvent } from "react";
 import type { NextPage } from "next";
 import Image from 'next/image';
 import Container from "../components/Container";
-// import { fetchS3File } from '../lib/s3';
+import { search, mapImageResources } from "../lib/cloudinary";
 
-interface ImageProps {
-  imageData: string[] | null;
-}
+type CustomImage = {
+  id: string;
+  title: string;
+  width: number;
+  height: number;
+  image: string;
+};
 
-const Photo: NextPage<ImageProps> = ({ imageData }) => {
+type ImageProps = {
+  images: CustomImage[];
+  nextCursor: string;
+};
+
+const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaultNextCursor }) => {
+  const [images, setImages] = useState<CustomImage[]>(defaultImages ?? []);
+  const [nextCursor, setNextCursor] = useState(defaultNextCursor);
+  const [error, setError] = useState<string | null>(null);
+
+
+  async function handleLoadMore(event: MouseEvent<HTMLButtonElement>): Promise<void> {
+    event.preventDefault();
+
+    try {
+      const response = await fetch('/api/search', {
+        method: 'POST',
+        body: JSON.stringify({
+          nextCursor
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+
+      const results = await response.json();
+      const { resources, next_cursor: updatedNextCursor } = results;
+      const mappedImages = mapImageResources(resources);
+
+      setImages(prev => [...prev, ...mappedImages]);
+      setNextCursor(updatedNextCursor);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setError('An error occurred while fetching data. Please try again.');
+    }
+  }
+
+
   return (
     <Container title="Photo">
       <div className="headingLg">Photos</div>
-      {imageData ? (
-        imageData.map((image: string | null, index: number) => (
-          image ? (
-            <Image
-              key={index}
-              src={`data:image/jpeg;base64,${image}`}
-              alt={`pexels-image-${index}`}
-              width={1080}
-              height={780}
-            />
-          ) : (
-            <div key={index}>No image available</div>
-          )
-        ))
-      ) : (
-        <div>No images available</div>
-      )}
+
+      {images && images.map((image?: CustomImage) => {
+        return (
+          <div key={image?.id}>
+            <a>
+              <Image
+                width={image?.width} height={image?.height} src={image?.image ?? ''} alt=""
+              />
+            </a>
+            <h3>{image?.id}</h3>
+          </div>
+        )
+      })}
+      <p>
+        <button onClick={handleLoadMore}>Load more</button>
+      </p>
     </Container>
-  );
+  )
 };
 
-// export async function getServerSideProps() {
-//   const bucketName = 'toms-photos';
-//   const keys = ['pexels-bri-schneiter-346529.jpg', 'pexels-simon-berger-1323550.jpg', 'pexels-vittorio-staffolani-1606328.jpg'];
-
-//   try {
-//     const dataPromises = keys.map((key: string) => fetchS3File(bucketName, key));
-//     const dataResults = await Promise.allSettled(dataPromises);
-
-//     const imageData = dataResults.map((result: PromiseSettledResult<{ Body: string | undefined; }>) => {
-//       if (result.status === 'fulfilled') {
-//         return result.value.Body || null;
-//       }
-//       return null;
-//     });
-
-//     return {
-//       props: {
-//         imageData,
-//       },
-//     };
-//   } catch (error) {
-//     console.error('Error fetching file:', error);
-//     return {
-//       props: {
-//         imageData: null,
-//       },
-//     };
-//   }
-// }
-
 export default Photo;
+
+export async function getStaticProps() {
+  const results = await search();
+
+  const { resources, next_cursor: nextCursor } = results;
+
+  const images = mapImageResources(resources);
+
+  return {
+    props: {
+      images: images || null,
+      nextCursor: nextCursor as string || null,
+    }
+  }
+}
+
