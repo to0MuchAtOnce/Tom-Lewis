@@ -5,8 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { LightTheme, DarkTheme } from "../styles/Theme";
 import 'prismjs/themes/prism-tomorrow.css';
 import { GlobalStyles } from "../styles/GlobalStyles";
-
-
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState<typeof LightTheme>(LightTheme);
@@ -31,6 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <DashboardLayout toggleTheme={toggleTheme}>
         <Component {...pageProps} />
+        <Analytics />
       </DashboardLayout>
     </ThemeProvider>
   );
