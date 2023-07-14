@@ -68,7 +68,7 @@ const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaul
         )
       })}
       <p>
-        {/* <button onClick={handleLoadMore}>Load more</button> */}
+        <button onClick={handleLoadMore}>Load more</button>
       </p>
     </Container>
   )

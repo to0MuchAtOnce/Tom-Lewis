@@ -9,7 +9,9 @@ interface Params {
 }
 
 export async function search(options?: Options): Promise<Params> {
-  const params: Params = {};
+  const params: Params = {
+    ...options,
+  };
 
   if (options && options.nextCursor) {
     params.next_cursor = options.nextCursor;
@@ -26,7 +28,6 @@ export async function search(options?: Options): Promise<Params> {
     },
   }).then((res) => res.json());
 
-  // console.log('results, results')
   return results || {};
 }
 
