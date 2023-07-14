@@ -46,18 +46,19 @@ interface ImageResource {
   height: number;
 }
 
-export function mapImageResources(resources: Resource[]): ImageResource[] {
-  return (
-    resources &&
-    resources.map((resource: Resource) => {
-      const { width, height } = resource;
-      return {
-        id: resource.asset_id,
-        title: resource.public_id,
-        image: resource.secure_url,
-        width,
-        height,
-      };
-    })
-  );
+export function mapImageResources(resources?: Resource[]): ImageResource[] {
+  if (!resources) {
+    return [];
+  }
+
+  return resources.map((resource: Resource) => {
+    const { width, height } = resource;
+    return {
+      id: resource.asset_id,
+      title: resource.public_id,
+      image: resource.secure_url,
+      width,
+      height,
+    };
+  });
 }
