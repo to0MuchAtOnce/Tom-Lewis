@@ -77,7 +77,7 @@ export async function getStaticProps() {
   return {
     props: {
       images: images || null,
-      nextCursor: nextCursor || null,
+      nextCursor: nextCursor as string || null,
     }
   }
 }

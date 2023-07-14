@@ -1,8 +1,10 @@
 interface Options {
+  next_cursor?: string;
   [key: string]: any;
 }
 
 interface Params {
+  next_cursor?: string;
   [key: string]: any;
 }
 
