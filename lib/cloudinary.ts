@@ -24,6 +24,7 @@ export async function search(options?: Options): Promise<Params> {
     },
   }).then((res) => res.json());
 
+  // console.log('results, results')
   return results || {};
 }
 

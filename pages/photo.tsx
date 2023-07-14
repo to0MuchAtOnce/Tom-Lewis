@@ -23,7 +23,7 @@ const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaul
 
   async function handleLoadMore(event: MouseEvent<HTMLButtonElement>): Promise<void> {
     event.preventDefault();
-    const results = await fetch('api/search', {
+    const results = await fetch('/api/search', {
       method: 'POST',
       body: JSON.stringify({
         nextCursor
