@@ -16,12 +16,28 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     margin: 0;
     height: 100%;
     width: 100%;
-    background-color: ${(props) => props.theme.mainBg};
+    background-color: ${props => props.theme.mainBg};
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.textLink {
+  color: ${props => props.theme.accent};
+  text-decoration: underline;
+}
+
+.textLink:hover {
+  color: ${props => props.theme.mainBg};
+  background: ${props => props.theme.accent};
+  text-decoration: underline;
+}
+
+.email {
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 .headingXl {
@@ -58,6 +74,7 @@ a {
 }
 
 .listItem:hover {
+  color: ${props => props.theme.accent};
   text-decoration: underline;
 }
 
@@ -80,11 +97,11 @@ a {
 }
 
 .footerIconColor {
-color: ${(props) => props.theme.footerIcon};
+color: ${props => props.theme.footerIcon};
 }
 
 .footerIconColor:hover {
-  color: ${(props) => props.theme.footerIconHover};
+  color: ${props => props.theme.footerIconHover};
 }
 
 @media (max-width: 700px) {
