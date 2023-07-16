@@ -63,7 +63,7 @@ const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaul
                 width={image?.width} height={image?.height} src={image?.image ?? ''} alt=""
               />
             </a>
-            <h3>{image?.id}</h3>
+            <h3>{image?.title}</h3>
           </div>
         )
       })}
