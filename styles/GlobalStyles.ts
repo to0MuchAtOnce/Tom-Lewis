@@ -29,6 +29,12 @@ a {
   text-decoration: underline;
 }
 
+.textLink:hover {
+  color: ${props => props.theme.mainBg};
+  background: ${props => props.theme.accent};
+  text-decoration: underline;
+}
+
 .email {
   text-decoration: underline;
 }
@@ -67,6 +73,7 @@ a {
 }
 
 .listItem:hover {
+  color: ${props => props.theme.accent};
   text-decoration: underline;
 }
 
