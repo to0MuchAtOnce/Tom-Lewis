@@ -1,6 +1,6 @@
 import type, { NextPage } from "next";
 import { GetStaticProps } from 'next';
-import { getPostData, PostData } from '../../lib/posts';
+import { getAllPostIds, getPostData, PostData } from '../../lib/posts';
 import Container from "../../components/Container";
 import Date from '../../components/Date';
 import { PostContainer } from '../../styles/Post.styles'
@@ -21,13 +21,13 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({ params }) => {
   };
 }
 
-// export async function getStaticPaths() {
-//   const paths = getAllPostIds();
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// }
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
 
 interface PostProps {
   postData: PostData;

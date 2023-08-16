@@ -50,17 +50,18 @@ export async function getSortedPostsData(): Promise<PostData[]> {
   });
 }
 
-// export function getAllPostIds(): { params: { id: string } }[] {
-//   const fileNames = fs.readdirSync(postsDirectory);
+// Called in getStaticPaths function
+export function getAllPostIds(): { params: { id: string } }[] {
+  const fileNames = fs.readdirSync(postsDirectory);
 
-//   return fileNames.map(fileName => {
-//     return {
-//       params: {
-//         id: fileName.replace(/\.md$/, ''),
-//       },
-//     };
-//   });
-// }
+  return fileNames.map(fileName => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ''),
+      },
+    };
+  });
+}
 
 export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
@@ -77,7 +78,7 @@ export async function getPostData(id: string) {
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
-  console.log(matterResult.data, 'hello');
+  // console.log(matterResult.data, 'hello');
 
   // Combine the data with the id
   return {

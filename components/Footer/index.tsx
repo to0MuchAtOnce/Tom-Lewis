@@ -13,7 +13,7 @@ export default function Footer() {
         <a className="FooterMenuItem footerIconColor" target="_blank"><IoLogoGithub /></a>
       </Link>
 
-      <Link href="#">
+      <Link href="https://twitter.com/UkkkirbTr/">
         <a className="FooterMenuItem footerIconColor" target='_blank'><IoLogoTwitter /></a>
       </Link>
     </FooterContainer >

@@ -20,8 +20,8 @@ export default function SidebarFooter({ toggleTheme }: SidebarFooterProps) {
           <a className="SidebarFooterMenuItem footerIconColor" target="_blank"><IoLogoGithub /></a>
         </Link>
 
-        <Link href="#">
-          <a className="SidebarFooterMenuItem footerIconColor"><IoLogoTwitter /></a>
+        <Link href="https://twitter.com/UkkkirbTr/">
+          <a className="SidebarFooterMenuItem footerIconColor" target="_blank"><IoLogoTwitter /></a>
         </Link>
       </FlexContainer>
 
