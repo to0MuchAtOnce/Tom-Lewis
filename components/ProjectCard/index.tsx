@@ -1,4 +1,5 @@
 import React from "react";
+import { GoLinkExternal } from "react-icons/go"
 
 interface CardProps {
     title: string;
@@ -9,9 +10,9 @@ interface CardProps {
 export const Card = ({ title, content, link }: CardProps) => {
     return (
         <div className="card">
-            <h2>{title}</h2>
+            <a href={link} target="_blank" rel="noopener noreferrer" className="cardTitle">{title}</a>
             <p>{content}</p>
-            <a href={link} target="blank" rel="noopener noreferrer">View</a>
+            <a href={link} target="_blank" className="btn-small" rel="noopener noreferrer">View <GoLinkExternal /></a>
         </div>
     )
 }

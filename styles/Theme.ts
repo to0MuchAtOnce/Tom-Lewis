@@ -4,6 +4,8 @@ declare module 'styled-components' {
   export interface Theme {
     primary: string;
     secondary: string;
+    card: string;
+    cardBorder: string;
     textDark: string;
     textLight: string;
     mainBg: string;
@@ -19,7 +21,9 @@ declare module 'styled-components' {
 
 export const LightTheme: DefaultTheme = {
   primary: '#292a3b',
-  secondary: '#414141',
+  secondary: '#696969',
+  card: '#ffffff',
+  cardBorder: '#e0e0e0',
   textDark: '#4e4e4e',
   textLight: '#e4e4e4',
   mainBg: '#f3eeee',
@@ -35,6 +39,8 @@ export const LightTheme: DefaultTheme = {
 export const DarkTheme: DefaultTheme = {
   primary: '#292a3b',
   secondary: '#dedede',
+  card: '#2e3135',
+  cardBorder: '#606060',
   textDark: '#d3d3d3',
   textLight: '#e4e4e4',
   mainBg: '#25292E',

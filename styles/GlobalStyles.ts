@@ -78,6 +78,11 @@ a {
   text-decoration: underline;
 }
 
+.btn-small {
+    border: 1px solid ${props => props.theme.cardBorder};
+    border-radius: 4px;
+  }
+
 .padding1px {
   padding-top: 1px;
 }

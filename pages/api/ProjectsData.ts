@@ -7,7 +7,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: 'Project 1',
-    content: 'Description of this project',
+    content:
+      'Description of this project is very very very very long in this particular case',
     link: '#',
   },
   {

@@ -6,15 +6,15 @@ export default function Footer() {
   return (
     <FooterContainer>
       <Link href="https://www.linkedin.com/in/tom-lewis-a42566202/">
-        <a className="FooterMenuItem footerIconColor" target="_blank"><IoLogoLinkedin /></a>
+        <a className="FooterMenuItem footerIconColor" target="_blank" rel="noopener noreferrer" ><IoLogoLinkedin /></a>
       </Link>
 
       <Link href="https://github.com/to0MuchAtOnce/">
-        <a className="FooterMenuItem footerIconColor" target="_blank"><IoLogoGithub /></a>
+        <a className="FooterMenuItem footerIconColor" target="_blank" rel="noopener noreferrer" ><IoLogoGithub /></a>
       </Link>
 
       <Link href="https://twitter.com/UkkkirbTr/">
-        <a className="FooterMenuItem footerIconColor" target='_blank'><IoLogoTwitter /></a>
+        <a className="FooterMenuItem footerIconColor" target='_blank' rel="noopener noreferrer" ><IoLogoTwitter /></a>
       </Link>
     </FooterContainer >
   )
