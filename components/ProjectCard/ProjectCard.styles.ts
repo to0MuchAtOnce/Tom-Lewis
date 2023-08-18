@@ -7,18 +7,16 @@ export const Cards = styled.div`
   color: ${props => props.theme.textDark};
   border: 1px solid ${props => props.theme.cardBorder};
   border-radius: 8px;
-  margin: 15px 0;
   padding: 15px;
-  min-width: 350px;
   flex-wrap: wrap;
-  margin: 20px;
 
-  /* .card {
+  .card {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-  } */
+    min-width: 280px;
+  }
 
   .cardTitle {
     font-size: 18px;

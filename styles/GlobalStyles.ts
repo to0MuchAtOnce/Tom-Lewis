@@ -80,12 +80,17 @@ a {
 
 .cards-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .btn-small {
-    border: 1px solid ${props => props.theme.cardBorder};
-    border-radius: 4px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid ${props => props.theme.cardBorder};
+  border-radius: 4px;
+}
 
 .padding1px {
   padding-top: 1px;
