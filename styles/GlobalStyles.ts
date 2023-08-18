@@ -78,6 +78,10 @@ a {
   text-decoration: underline;
 }
 
+.cards-container {
+  display: flex;
+}
+
 .btn-small {
     border: 1px solid ${props => props.theme.cardBorder};
     border-radius: 4px;

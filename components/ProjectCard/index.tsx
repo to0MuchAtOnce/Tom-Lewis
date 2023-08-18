@@ -12,7 +12,7 @@ export const Card = ({ title, content, link }: CardProps) => {
         <div className="card">
             <a href={link} target="_blank" rel="noopener noreferrer" className="cardTitle">{title}</a>
             <p>{content}</p>
-            <a href={link} target="_blank" className="btn-small" rel="noopener noreferrer">View <GoLinkExternal /></a>
+            <a href={link} target="_blank" className="btn-small" rel="noopener noreferrer"><span className="btn-small-txt">View</span><GoLinkExternal className="linkExternal" /></a>
         </div>
     )
 }
