@@ -26,7 +26,7 @@ export const LightTheme: DefaultTheme = {
   cardBorder: '#e0e0e0',
   textDark: '#4e4e4e',
   textLight: '#e4e4e4',
-  mainBg: '#f3eeee',
+  mainBg: '#f4f2f2',
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#eba93e',

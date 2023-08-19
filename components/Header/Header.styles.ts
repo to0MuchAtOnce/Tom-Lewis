@@ -12,7 +12,7 @@ export const HeaderContainer = styled.header`
   background: ${props => props.theme.mainBg};
   height: 50px;
   color: ${props => props.theme.secondary};
-  @media (min-width: 1440px) {
+  @media (min-width: 1600px) {
     display: none;
     margin: 0;
   }
