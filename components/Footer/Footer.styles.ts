@@ -4,9 +4,10 @@ export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${(props) => props.theme.mainBg};
+  background: ${props => props.theme.mainBg};
   height: 50px;
-  color: ${(props) => props.theme.secondary};
+  color: ${props => props.theme.secondary};
+  gap: 1rem;
 
   @media (min-width: 1440px) {
     display: none;
@@ -14,7 +15,6 @@ export const FooterContainer = styled.footer`
 
   .FooterMenuItem {
     cursor: pointer;
-    padding-right: 1rem;
     font-size: 30px;
   }
 `;
