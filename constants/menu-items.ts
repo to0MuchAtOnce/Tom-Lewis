@@ -6,8 +6,12 @@ const MENU_OPTIONS: MenuOption[] = [
     url: '/',
     subItems: [
       {
-        name: 'Adding dark mode to this site',
-        url: '/posts/Adding dark mode to this site',
+        name: 'Coding a theme switcher',
+        url: 'Coding a theme switcher',
+      },
+      {
+        name: 'Rock, Paper, Scissors',
+        url: 'Rock, Paper, Scissors',
       },
     ],
   },
@@ -60,7 +64,10 @@ function makeMenuLevel(options: MenuOption[], depth = 0): MenuItem[] {
     ...option,
     id: depth === 0 ? idx.toString() : `${depth}.${idx}`,
     depth,
-    subItems: option.subItems && option.subItems.length > 0 ? makeMenuLevel(option.subItems, depth + 0.5) : undefined,
+    subItems:
+      option.subItems && option.subItems.length > 0
+        ? makeMenuLevel(option.subItems, depth + 0.5)
+        : undefined,
   }));
 }
 

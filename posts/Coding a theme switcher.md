@@ -1,5 +1,5 @@
 ---
-title: 'Implementing a theme switcher'
+title: 'Coding a theme switcher'
 date: '2023-06-20'
 ---
 <div className="codeSmall"></div>

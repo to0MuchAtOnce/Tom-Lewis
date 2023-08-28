@@ -9,6 +9,9 @@ declare module 'styled-components' {
     textDark: string;
     textLight: string;
     mainBg: string;
+    codeBgInline: string;
+    codeTextInline: string;
+    codeBorderInline: string;
     greyBg: string;
     themeBtn: string;
     themeIcon: string;
@@ -27,6 +30,9 @@ export const LightTheme: DefaultTheme = {
   textDark: '#4e4e4e',
   textLight: '#e4e4e4',
   mainBg: '#f4f2f2',
+  codeBgInline: '#7b7b7b',
+  codeTextInline: '#FFF',
+  codeBorderInline: '#353333',
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#eba93e',
@@ -44,6 +50,9 @@ export const DarkTheme: DefaultTheme = {
   textDark: '#d3d3d3',
   textLight: '#e4e4e4',
   mainBg: '#25292E',
+  codeBgInline: '#353536',
+  codeTextInline: '#D3D3D3',
+  codeBorderInline: '#555657',
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#eba93e',
