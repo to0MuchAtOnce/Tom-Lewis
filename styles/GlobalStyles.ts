@@ -24,6 +24,13 @@ a {
   text-decoration: none;
 }
 
+  .LogoFullStop {
+    font-size: 1.5rem;
+    color: ${props => props.theme.accent};
+    font-weight: 900;
+    padding-left: 3px;
+  }
+
 .textLink {
   color: ${props => props.theme.accent};
   text-decoration: underline;
