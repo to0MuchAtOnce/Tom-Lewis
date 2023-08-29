@@ -3,7 +3,7 @@ title: 'Rock, Paper, Scissors'
 date: '2023-08-28'
 ---
 
-I've decided recently to take things back basics as I feel like there are many holes in my knowledge when it comes to web development. I think this will inspire confidence and solidify the knowledge I've already gained. So I turned to <base target=_blank ><span class=post-link>[The Odin Project](https://www.theodinproject.com/)</span>. A fantastic open source resource for full stack web development, which also teaches how to think when solving problems, not just how to write code. This is my version of the popular game rock, paper, scissors, a challenge from TOP Foundations course.  
+I've decided recently to take things back basics as I feel there are many holes in my knowledge when it comes to web development. I think this will inspire confidence and solidify the knowledge I've already gained. So I turned to <base target=_blank ><span class=post-link>[The Odin Project](https://www.theodinproject.com/)</span>. A fantastic open source resource for full stack web development, which also teaches how to think when solving problems, not just how to write code. This is my version of the popular game rock, paper, scissors, a challenge from TOP Foundations course.  
 
 When I first started to program, I wasn't sure how to approach a project like this, where do you begin? The best way to approach such a problem is to break it down into smaller problems. Ask yourself some questions:
 
@@ -13,7 +13,7 @@ When I first started to program, I wasn't sure how to approach a project like th
 
 I found it helpful to try to understand what it is I need to achieve before hand, rather than diving to writing code and becoming frustrated when I loose track of what i’m doing, simply because I don’t have a plan. 
 
-I wrote out my answers in pseudocode like so:
+After spending some time thinking about what I needed to do I wrote the program out in pseudocode like so:
 
 ```
 1. The user chooses an option (rock, paper, scissors)
@@ -24,7 +24,7 @@ I wrote out my answers in pseudocode like so:
 6. If the result is paper vs rock then paper wins and the player gets a point
 7. Game will run for 5 rounds, the first person to 5 points wins the game
 ```
-This is a new approach for me taking the code out of the way. This helped me to visualise what I needed to achieve.
+This is a new approach for me taking the code out of the way, helping me to visualise what I needed to achieve.
 
 ## The Computer’s Choice
 
@@ -44,7 +44,7 @@ function getComputerChoice() {
 }
 ```
 
-The above function called <code class=inline-code>getComputerChoice</code> contains 2 variables. The first is <code class=inline-code>random</code> which randomly chooses an index from the choice array using the <code class=inline-code> Math</code> functions <code class=inline-code>Math.floor()</code> and <code class=inline-code>Math.random()</code>. The second is <code class=inline-code>computerSelection</code> which stores the random index from the choice array. This value is then returned by the function. 
+The above function called <code class=inline-code>getComputerChoice</code> contains 2 variables. The first is <code class=inline-code>random</code> which randomly chooses an index from the choice array, using the <code class=inline-code> Math</code> functions <code class=inline-code>Math.floor()</code> and <code class=inline-code>Math.random()</code>. The second is <code class=inline-code>computerSelection</code> which stores the random index from the choice array. This value is then returned by the function. 
 
 ```js
 function playRound(playerSelection, computerSelection) {
@@ -56,9 +56,14 @@ function playRound(playerSelection, computerSelection) {
 
 I made a function called <code class=inline-code>playRound</code> which takes two parameters, <code class=inline-code>playerSelection</code> and <code class=inline-code>computerSelection</code>. First, I made it possible for the user to input words with both uppercase and lowercase letters by setting the playerSelection parameter equal to a new variable called <code class=inline-code>lowerCasePlayerSelection</code>:
 
+```js
+// convert all user input to lower case
+const lowerCasePlayerSelection = playerSelection.toLowerCase();
+```
+
 ## The Main Logic
 
-Next I wrote out this long series of <code class="inline-code">if</code> and <code class=inline-code>if else</code> statements covering all the relevant scenarios that can occur while playing the game. This helped me to visualise exactly what I was doing. When I finished writing all this out, I felt like there had to be a more concise way of doing things, the code is not very readable and it’s quite long:
+Next I wrote out this long series of <code class="inline-code">if</code> and <code class=inline-code>if else</code> statements covering all the relevant scenarios that can occur while playing the game. When I finished writing all this out, I felt like there had to be a more concise way of doing things. The code is not very readable and it’s quite long:
 
 ```js
 if (lowerCasePlayerSelection === computerSelection) {
@@ -96,7 +101,7 @@ return 'You win, scissors beats paper';
 }
 ```
 
-So after some research I was able greatly minimise the <code class=inline-code>if</code> statements by using string concatenation to create the returned strings:
+So after some research I was able greatly minimise the code by using string concatenation to create the returned strings:
 
 ```js
 function playRound(playerSelection, computerSelection) {
@@ -181,4 +186,4 @@ This would loop up to 100 times if the condition in the <code class=inline-code>
 
 For now this game has no user interface but it will be added over the next few lessons of The Odin Project, and I’ll update this post after i’ve made it.
 
-If you notice any inaccuracies in my code which can be found on GitHub; or see something that I could do better don’t hesitate to contact me on twitter, I’m always interested in connecting with new people.  Please see my social links below.
+If you notice any inaccuracies in my code which can be found on <base target=_blank><span class=post-link>[GitHub](https://github.com/to0MuchAtOnce/rock-paper-scissors/blob/main/README.md)</span> or see something that I could do better; don’t hesitate to contact me on twitter. I’m always interested in connecting with new people.  

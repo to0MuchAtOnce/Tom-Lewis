@@ -1,9 +1,18 @@
 import styled from 'styled-components';
 
 export const PostContainer = styled.div`
+  h2 {
+    letter-spacing: 0.05rem;
+  }
+
   p {
     line-height: 1.6;
+    letter-spacing: 0.05rem;
     padding: 5px 0;
+  }
+
+  ul li {
+    letter-spacing: 0.04rem;
   }
 
   pre {
@@ -14,7 +23,6 @@ export const PostContainer = styled.div`
   }
 
   code {
-    /* color: #363738; */
     font-size: 13px;
     border: 0.9px solid #2d2d2d;
     padding: 2px 0px;
@@ -36,11 +44,5 @@ export const PostContainer = styled.div`
 
   .post-link:hover {
     text-decoration-color: #eee;
-  }
-
-  .full-stop {
-    font-size: 1rem;
-    color: ${props => props.theme.accent};
-    font-weight: 900;
   }
 `;

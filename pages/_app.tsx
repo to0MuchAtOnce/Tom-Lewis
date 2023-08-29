@@ -7,11 +7,9 @@ import { DefaultTheme, ThemeProvider } from "styled-components";
 import { LightTheme, DarkTheme } from "../styles/Theme";
 import { GlobalStyles } from "../styles/GlobalStyles";
 
-
 export const MyApp = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = useState<DefaultTheme>(DarkTheme);
 
-  //
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     const initialTheme = savedTheme === "dark" ? DarkTheme : LightTheme;
