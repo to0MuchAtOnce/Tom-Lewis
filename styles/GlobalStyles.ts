@@ -12,8 +12,7 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
 
   html,
   body {
-    font-family: 'Lato', sans-serif;
-    letter-spacing: .07rem;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
     padding: 0;
     margin: 0;
     height: 100%;
@@ -119,6 +118,12 @@ color: ${props => props.theme.footerIcon};
 .footerIconColor:hover {
   color: ${props => props.theme.footerIconHover};
 }
+
+.full-stop {
+    font-size: 1rem;
+    color: ${props => props.theme.accent};
+    font-weight: 900;
+  }
 
 @media (max-width: 700px) {
   .Date {

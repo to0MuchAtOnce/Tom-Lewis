@@ -75,13 +75,13 @@ export const SidebarLogo = styled.div`
     font-size: 1.5rem;
     color: ${props => props.theme.accent};
     font-weight: 900;
-    padding-left: 3px;
+    margin-left: 3px;
   }
 `;
 
 export const LogoContainer = styled.div`
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
 
   :hover {
@@ -89,23 +89,25 @@ export const LogoContainer = styled.div`
   }
 
   .LogoFullStop {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: ${props => props.theme.accent};
     font-weight: 900;
-    padding-left: 3px;
+    margin-left: 3px;
   }
 
-  @media (max-width: 445px) {
-    font-size: 1.3rem;
+  @media (max-width: 485px) {
+    font-size: 1.4rem;
     .LogoFullStop {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
     }
   }
+
   @media (max-width: 435px) {
     font-size: 1.2rem;
     .LogoFullStop {
       font-size: 1.2rem;
     }
+
     @media (max-width: 413px) {
       display: none;
     }

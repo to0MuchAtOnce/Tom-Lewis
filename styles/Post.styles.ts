@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const PostContainer = styled.div`
   h2 {
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.06rem;
   }
 
   p {
     line-height: 1.6;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.04rem;
     padding: 5px 0;
   }
 
