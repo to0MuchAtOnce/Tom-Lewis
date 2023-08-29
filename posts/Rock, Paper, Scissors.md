@@ -3,7 +3,7 @@ title: 'Rock, Paper, Scissors'
 date: '2023-08-28'
 ---
 
-I've decided recently to take things back basics as I feel like there are many holes in my knowledge when it comes to web development. I think this will inspire confidence and solidify the knowledge I've already gained. So I turned to [The Odin Project](https://www.theodinproject.com/). A fantastic open source resource for full stack web development, which also teaches how to think when solving problems, not just how to write code. This is my version of the popular game rock, paper, scissors, a challenge from TOP Foundations course.  
+I've decided recently to take things back basics as I feel like there are many holes in my knowledge when it comes to web development. I think this will inspire confidence and solidify the knowledge I've already gained. So I turned to <base target=_blank ><span class=post-link>[The Odin Project](https://www.theodinproject.com/)</span>. A fantastic open source resource for full stack web development, which also teaches how to think when solving problems, not just how to write code. This is my version of the popular game rock, paper, scissors, a challenge from TOP Foundations course.  
 
 When I first started to program, I wasn't sure how to approach a project like this, where do you begin? The best way to approach such a problem is to break it down into smaller problems. Ask yourself some questions:
 

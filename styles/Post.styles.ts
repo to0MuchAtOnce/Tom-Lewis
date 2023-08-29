@@ -29,6 +29,15 @@ export const PostContainer = styled.div`
     padding: 0.15rem 0.21rem;
   }
 
+  .post-link {
+    color: ${props => props.theme.accent};
+    text-decoration: underline;
+  }
+
+  .post-link:hover {
+    text-decoration-color: #eee;
+  }
+
   .full-stop {
     font-size: 1rem;
     color: ${props => props.theme.accent};
