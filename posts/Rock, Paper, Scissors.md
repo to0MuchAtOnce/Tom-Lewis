@@ -44,7 +44,7 @@ function getComputerChoice() {
 }
 ```
 
-The above function called <code class=inline-code>getComputerChoice</code> contains 2 variables. The first is <code class=inline-code>random</code> which randomly chooses an index from the choice array using the `Math` functions <code class=inline-code>Math.floor()</code> and <code class=inline-code>Math.random()</code>. The second is <code class=inline-code>computerSelection</code> which stores the random index from the choice array. This value is then returned by the function. 
+The above function called <code class=inline-code>getComputerChoice</code> contains 2 variables. The first is <code class=inline-code>random</code> which randomly chooses an index from the choice array using the <code class=inline-code> Math</code> functions <code class=inline-code>Math.floor()</code> and <code class=inline-code>Math.random()</code>. The second is <code class=inline-code>computerSelection</code> which stores the random index from the choice array. This value is then returned by the function. 
 
 ```js
 function playRound(playerSelection, computerSelection) {
@@ -181,4 +181,4 @@ This would loop up to 100 times if the condition in the <code class=inline-code>
 
 For now this game has no user interface but it will be added over the next few lessons of The Odin Project, and I’ll update this post after i’ve made it.
 
-If you notice any inaccuracies in my code which can be found on GitHub; or see something that I could do better don’t hesitate to contact me on twitter, I’m always interested in connecting with new people.  Please see my social links below <span class="full-stop">.</span>
+If you notice any inaccuracies in my code which can be found on GitHub; or see something that I could do better don’t hesitate to contact me on twitter, I’m always interested in connecting with new people.  Please see my social links below.

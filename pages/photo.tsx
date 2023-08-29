@@ -1,6 +1,6 @@
 import { useState, MouseEvent } from "react";
 import type { NextPage } from "next";
-import Image from 'next/image';
+// import Image from 'next/image';
 import Container from "../components/Container";
 import { search, mapImageResources } from "../lib/cloudinary";
 
@@ -53,23 +53,23 @@ const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaul
 
   return (
     <Container title="Photo">
-      <div className="headingLg">Photos</div>
+      <div className="headingLg">Coming Soon</div>
 
       {images && images.map((image?: CustomImage) => {
-        return (
-          <div key={image?.id}>
-            <a>
-              <Image
-                width={image?.width} height={image?.height} src={image?.image ?? ''} alt=""
-              />
-            </a>
-            <h3>{image?.title}</h3>
-          </div>
-        )
+        // return (
+        //   <div key={image?.id}>
+        //     <a>
+        //       <Image
+        //         width={image?.width} height={image?.height} src={image?.image ?? ''} alt=""
+        //       />
+        //     </a>
+        //     <h3>{image?.title}</h3>
+        //   </div>
+        // )
       })}
-      <p>
+      {/* <p>
         <button onClick={handleLoadMore}>Load more</button>
-      </p>
+      </p> */}
     </Container>
   )
 };

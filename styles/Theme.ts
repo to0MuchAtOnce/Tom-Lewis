@@ -32,7 +32,7 @@ export const LightTheme: DefaultTheme = {
   mainBg: '#f4f2f2',
   codeBgInline: '#7b7b7b',
   codeTextInline: '#FFF',
-  codeBorderInline: '#353333',
+  codeBorderInline: '#6c6a6a',
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#eba93e',

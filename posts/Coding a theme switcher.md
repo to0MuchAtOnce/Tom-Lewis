@@ -5,9 +5,9 @@ date: '2023-06-20'
 <div className="codeSmall"></div>
 These days more and more websites are offering dark mode. I personally look for it on every site I visit, that’s if it’s not already the only theme available. For my site I wanted to give the user a choice of theme based on their preference. In this tutorial I’ll show you how I implemented a theme switcher for this site which saves the selected theme to localStorage for the next time you visit.
 
-I began by creating a state variable to track the current theme in `_app.tsx` using the `useState` hook. The `theme` variable holds the current theme and updates it accordingly. When triggered, if the theme is set to `LightTheme` it will be set to `DarkTheme`, and vice versa. I initialised it with the default app theme, `LightTheme` and then passed it as a prop to `DashboardLayout.tsx`.
+I began by creating a state variable to track the current theme in <code class=inline-code>_app.tsx</code> using the <code class=inline-code>useState</code> hook. The <code class=inline-code>theme</code> variable holds the current theme and updates it accordingly. When triggered, if the theme is set to <code class=inline-code>LightTheme</code> it will be set to <code class=inline-code>DarkTheme</code>, and vice versa. I initialised it with the default app theme, <code class=inline-code>LightTheme</code> and then passed it as a prop to <code class=inline-code>DashboardLayout.tsx</code>.
 
-Inside the `ThemeProvider` component the `theme` variable is passed as the value for the theme, making the theme variable available throughout the component tree, allowing all other components to access and use the theme.
+Inside the <code class=inline-code>ThemeProvider</code> component the <code class=inline-code>theme</code> variable is passed as the value for the theme, making the theme variable available throughout the component tree, allowing all other components to access and use the theme.
 
 #### _app.tsx 
 ```tsx
@@ -39,7 +39,7 @@ export default MyApp;
 
 ```
 
-Inside the `DashboardLayout` component I added the `toggleThem` function as a prop. Allowing it to be passed down to child components, like the header or the sidebar, where the theme toggle buttons live.
+Inside the <code class=inline-code>DashboardLayout</code> component I added the <code class=inline-code>toggleThem</code> function as a prop. Allowing it to be passed down to child components, like the header or the sidebar, where the theme toggle buttons live.
 
 #### DashboardLayout.tsx
 ```tsx
@@ -69,9 +69,9 @@ export default function DashboardLayout({ children, toggleTheme }: DashboardLayo
 
 ```
 
-I added the `toggleTheme` to the `HeaderProps` type to include the `toggleTheme` function prop. The toggle theme function is attached to the `onClick` event of the theme toggle button. When the button is clicked the functionality is triggered. Also the function in `_app.tsx` is executed which updates the `theme` state based on its current value.
+I added the <code class=inline-code>toggleTheme</code> to the <code class=inline-code>HeaderProps</code> type to include the <code class=inline-code>toggleTheme</code> function prop. The toggle theme function is attached to the <code class=inline-code>onClick</code> event of the theme toggle button. When the button is clicked the functionality is triggered. Also the function in <code class=inline-code>_app.tsx</code> is executed which updates the <code class=inline-code>theme</code> state based on its current value.
 
-This then triggers a re-render of the components wrapped in the `ThemeProvider`, updating the app and applying the new theme to the styled components.
+This then triggers a re-render of the components wrapped in the <code class=inline-code>ThemeProvider</code>, updating the app and applying the new theme to the styled components.
 
 #### Header/index.tsx
 ```tsx
@@ -101,9 +101,9 @@ export default function Header({ toggleTheme }: HeaderProps) {
 
 ### Saving Theme to localStorage
 
-Now lets modify the `_app.tsx` code to make sure our preferred theme is saved to localStorage in the browser, ready for the next time we visit.
+Now lets modify the <code class=inline-code>_app.tsx</code> code to make sure our preferred theme is saved to localStorage in the browser, ready for the next time we visit.
 
-Here is the previous `_app.tsx` code for easy comparison:
+Here is the previous <code class=inline-code>_app.tsx</code> code for easy comparison:
 
 ```tsx
 import { useEffect, useState } from "react";
@@ -154,9 +154,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 These simple, but effective changes allow the browser to store our theme preference ensuring persistence across sessions and page reloads.
 
-First we import the `useEffect` hook from react with an empty dependency array, making sure the the effect only runs once when the site renders.
+First we import the <code class=inline-code>useEffect</code> hook from react with an empty dependency array, making sure the the effect only runs once when the site renders.
 
-Inside the the `useEffect` we retrieve the saved theme from localStorage using `localStorage.getItem("theme")`.
+Inside the the <code class=inline-code>useEffect</code> we retrieve the saved theme from localStorage using <code class=inline-code>localStorage.getItem("theme")</code>.
 
 If a saved theme exists, we update the state with the corresponding theme.
 
@@ -174,4 +174,4 @@ Now the app retrieves the information every time it's loaded, setting the the pr
 
 ### Conclusion
 
-To summarise, this code sets up a state variable `theme` and a `toggleTheme` function to handle the toggling of themes. The theme state is passed down via the `ThemeProvider` to make it accessible to styled components. The `toggleTheme` function is passed as a prop to the Header component, where it is attached to the theme toggle button's onClick event. When the button is clicked, the theme state is updated, triggering a re-render and applying the new theme to the app.
+To summarise, this code sets up a state variable <code class=inline-code>theme</code> and a <code class=inline-code>toggleTheme</code> function to handle the toggling of themes. The theme state is passed down via the <code class=inline-code>ThemeProvider</code> to make it accessible to styled components. The <code class=inline-code>toggleTheme</code> function is passed as a prop to the Header component, where it is attached to the theme toggle button's onClick event. When the button is clicked, the theme state is updated, triggering a re-render and applying the new theme to the app.
