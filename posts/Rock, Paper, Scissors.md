@@ -1,5 +1,5 @@
 ---
-title: 'Rock, Paper, Scissors'
+title: 'Making Rock, Paper, Scissors'
 date: '2023-08-28'
 ---
 
@@ -186,4 +186,4 @@ This would loop up to 100 times if the condition in the <code class=inline-code>
 
 For now this game has no user interface but it will be added over the next few lessons of The Odin Project, and I’ll update this post after i’ve made it.
 
-If you notice any inaccuracies in my code which can be found on <base target=_blank><span class=post-link>[GitHub](https://github.com/to0MuchAtOnce/rock-paper-scissors/blob/main/README.md)</span> or see something that I could do better; don’t hesitate to contact me on twitter. I’m always interested in connecting with new people.  
+If you notice any inaccuracies in my code which can be found on <base target=_blank><span class=post-link>[GitHub](https://github.com/to0MuchAtOnce/rock-paper-scissors/tree/main)</span> or see something that I could do better; don’t hesitate to contact me on twitter. I’m always interested in connecting with new people.  

@@ -10,7 +10,7 @@ const MENU_OPTIONS: MenuOption[] = [
         url: 'Coding a theme switcher',
       },
       {
-        name: 'Rock, Paper, Scissors',
+        name: 'Making Rock, Paper, Scissors',
         url: 'Rock, Paper, Scissors',
       },
     ],
@@ -18,16 +18,16 @@ const MENU_OPTIONS: MenuOption[] = [
   {
     name: 'Photo',
     url: '/photo',
-    subItems: [
-      {
-        name: 'Colour',
-        url: '/colour',
-      },
-      {
-        name: 'Mono',
-        url: '/mono',
-      },
-    ],
+    // subItems: [
+    //   {
+    //     name: 'Colour',
+    //     url: '/colour',
+    //   },
+    //   {
+    //     name: 'Mono',
+    //     url: '/mono',
+    //   },
+    // ],
   },
   {
     name: 'Projects',
