@@ -10,7 +10,7 @@ const Projects: NextPage = () => {
     <>
       <Head>
         <meta name='twitter:card' content='summary' />
-        <meta name='twitter:site' content='@UkkkirbTr' />
+        <meta name='twitter:creator' content='@UkkkirbTr' />
         <meta name='twitter:title' content='Projects' />
         <meta
           name='twitter:description'
