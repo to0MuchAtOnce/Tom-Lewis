@@ -18,7 +18,7 @@ const Projects: NextPage = () => {
         />
         <meta
           name='twitter:image'
-          content='https://www.tom-lewis.dev/projects'
+          content='https://drive.google.com/file/d/1WVvvARXYeqEtH_e92_RJp8rioWi-xGmd/view?usp=drive_link'
         />
       </Head>
       <Container title='Projects'>
