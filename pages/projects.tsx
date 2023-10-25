@@ -9,7 +9,6 @@ const Projects: NextPage = () => {
   return (
     <>
       <Head>
-        <meta name='description' content='Nextjs Dashboard Layout' />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@UkkkirbTr' />
         <meta name='twitter:title' content='Projects' />
@@ -19,7 +18,7 @@ const Projects: NextPage = () => {
         />
         <meta
           name='twitter:image'
-          content='https://to0muchatonce.github.io/etch-a-sketch/'
+          content='https://www.tom-lewis.dev/projects'
         />
       </Head>
       <Container title='Projects'>
