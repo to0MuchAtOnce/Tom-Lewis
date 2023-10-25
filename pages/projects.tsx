@@ -9,7 +9,7 @@ const Projects: NextPage = () => {
   return (
     <>
       <Head>
-        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:card' content='summary' />
         <meta name='twitter:site' content='@UkkkirbTr' />
         <meta name='twitter:title' content='Projects' />
         <meta
@@ -18,7 +18,7 @@ const Projects: NextPage = () => {
         />
         <meta
           name='twitter:image'
-          content='https://drive.google.com/file/d/1WVvvARXYeqEtH_e92_RJp8rioWi-xGmd/view?usp=drive_link'
+          content='https://www.tom-lewis.dev/images/projects-page.png'
         />
       </Head>
       <Container title='Projects'>

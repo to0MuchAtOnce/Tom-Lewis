@@ -1,11 +1,12 @@
 # Portfolio Site
 
 ## What I want to achive
-I made this site to display my skills as I develop as a web developer. Here's a list of things I plan to achive over the coming months: 
 
-* Keep my blog up to date, writing posts about things I work on.
-* Display my projects as I make them. 
-* Showcase my photography work.
+I made this site to display my skills as I develop as a web developer. Here's a list of things I plan to achive over the coming months:
+
+- Keep my blog up to date, writing posts about things I work on.
+- Display my projects as I make them.
+- Showcase my photography work.
 
 ## Ingredients
 
@@ -31,3 +32,5 @@ npm run dev
 ```
 
 4. Open in the browser at http://localhost:3000
+
+![](/images/projects-page.png)
