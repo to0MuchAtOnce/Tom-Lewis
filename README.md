@@ -32,5 +32,3 @@ npm run dev
 ```
 
 4. Open in the browser at http://localhost:3000
-
-![](/images/projects-page.png)

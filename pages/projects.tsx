@@ -16,10 +16,7 @@ const Projects: NextPage = () => {
           name='twitter:description'
           content='A collection of my dev projects'
         />
-        <meta
-          name='twitter:image'
-          content='https://www.tom-lewis.dev/images/projects-page.png'
-        />
+        <meta name='twitter:image' content='/public/images/blue-dot.png' />
       </Head>
       <Container title='Projects'>
         <div className='headingLg'>Projects</div>

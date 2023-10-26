@@ -10,13 +10,24 @@ export default function Container({ title, children }: ContainerProps) {
     <>
       <Head>
         <title>{title}</title>
-
         <meta name='og:title' content={title} />
+        <link rel='shortcut icon' href='/images/favicon.ico' />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/images/apple-touch-icon.png'
+        />
         <link
           rel='icon'
-          href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔵
-blue circle
-Unicode: U+1F535, UTF-8: F0 9F 94 B5</text></svg>'
+          type='image/png'
+          sizes='32x32'
+          href='/images/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/images/favicon-16x16.png'
         />
       </Head>
       {children}
