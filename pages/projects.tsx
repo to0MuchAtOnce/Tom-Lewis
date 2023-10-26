@@ -14,7 +14,7 @@ const Projects: NextPage = () => {
         <meta name='twitter:title' content='Projects' />
         <meta
           name='twitter:description'
-          content='A collection of my dev projects'
+          content='A place where you can keep up to date with my latest work'
         />
         <meta name='twitter:image' content='/public/images/blue-dot.png' />
       </Head>
