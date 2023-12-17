@@ -1,8 +1,8 @@
-import { useState, MouseEvent } from "react";
-import type { NextPage } from "next";
-// import Image from 'next/image';
-import Container from "../components/Container";
-import { search, mapImageResources } from "../lib/cloudinary";
+import { useState, useEffect } from 'react';
+import type { NextPage } from 'next';
+import Container from '../components/Container';
+import { search, mapImageResources, getFolders } from '../lib/cloudinary';
+import Link from 'next/link';
 
 type CustomImage = {
   id: string;
@@ -12,66 +12,71 @@ type CustomImage = {
   image: string;
 };
 
+type CustomFolder = {
+  name: string;
+  path: string;
+};
+
 type ImageProps = {
   images: CustomImage[];
   nextCursor: string;
+  folders: CustomFolder[];
 };
 
-const Photo: NextPage<ImageProps> = ({ images: defaultImages, nextCursor: defaultNextCursor }) => {
+const Photo: NextPage<ImageProps> = ({
+  images: defaultImages,
+  nextCursor: defaultNextCursor,
+  folders,
+}) => {
   const [images, setImages] = useState<CustomImage[]>(defaultImages ?? []);
   const [nextCursor, setNextCursor] = useState(defaultNextCursor);
   const [error, setError] = useState<string | null>(null);
 
+  useEffect(() => {
+    (async function run() {
+      try {
+        const response = await fetch('/api/search', {
+          method: 'POST',
+          body: JSON.stringify({
+            nextCursor,
+          }),
+        });
 
-  async function handleLoadMore(event: MouseEvent<HTMLButtonElement>): Promise<void> {
-    event.preventDefault();
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
 
-    try {
-      const response = await fetch('/api/search', {
-        method: 'POST',
-        body: JSON.stringify({
-          nextCursor
-        })
-      });
+        const results = await response.json();
+        const { resources, next_cursor: updatedNextCursor } = results;
+        const mappedImages = mapImageResources(resources);
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch data');
+        setImages((prev) => [...prev, ...mappedImages]);
+        setNextCursor(updatedNextCursor);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setError('An error occurred while fetching data. Please try again.');
       }
-
-      const results = await response.json();
-      const { resources, next_cursor: updatedNextCursor } = results;
-      const mappedImages = mapImageResources(resources);
-
-      setImages(prev => [...prev, ...mappedImages]);
-      setNextCursor(updatedNextCursor);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-      setError('An error occurred while fetching data. Please try again.');
-    }
-  }
-
+    })();
+  });
 
   return (
-    <Container title="Photo">
-      <div className="headingLg">Coming Soon</div>
+    <Container title='Folders'>
+      <div className='headingLg'>Folders</div>
 
-      {images && images.map((image?: CustomImage) => {
-        // return (
-        //   <div key={image?.id}>
-        //     <a>
-        //       <Image
-        //         width={image?.width} height={image?.height} src={image?.image ?? ''} alt=""
-        //       />
-        //     </a>
-        //     <h3>{image?.title}</h3>
-        //   </div>
-        // )
-      })}
-      {/* <p>
-        <button onClick={handleLoadMore}>Load more</button>
-      </p> */}
+      <ul>
+        {folders &&
+          folders.map((folder?: CustomFolder) => {
+            return (
+              <li key={folder?.path}>
+                <Link href={`/folder/${folder?.path}`}>
+                  <a>{folder?.name}</a>
+                </Link>
+              </li>
+            );
+          })}
+      </ul>
     </Container>
-  )
+  );
 };
 
 export default Photo;
@@ -82,12 +87,13 @@ export async function getStaticProps() {
   const { resources, next_cursor: nextCursor } = results;
 
   const images = mapImageResources(resources);
+  const { folders } = await getFolders();
 
   return {
     props: {
       images: images || null,
-      nextCursor: nextCursor as string || null,
-    }
-  }
+      nextCursor: (nextCursor as string) || null,
+      folders,
+    },
+  };
 }
-

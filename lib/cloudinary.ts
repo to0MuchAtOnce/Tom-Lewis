@@ -22,11 +22,35 @@ export async function search(options?: Options): Promise<Params> {
     .map((key) => `${key}=${encodeURIComponent(params[key])}`)
     .join('&');
 
-  const results = await fetch(`https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image?${paramString}`, {
-    headers: {
-      authorization: `Basic ${Buffer.from(process.env.CLOUDINARY_API_KEY + ':' + process.env.CLOUDINARY_API_SECRET).toString('base64')} `,
-    },
-  }).then((res) => res.json());
+  const results = await fetch(
+    `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image?${paramString}`,
+    {
+      headers: {
+        authorization: `Basic ${Buffer.from(
+          process.env.CLOUDINARY_API_KEY +
+            ':' +
+            process.env.CLOUDINARY_API_SECRET
+        ).toString('base64')} `,
+      },
+    }
+  ).then((res) => res.json());
+
+  return results || {};
+}
+
+export async function getFolders(options?: Options): Promise<Params> {
+  const results = await fetch(
+    `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/folders`,
+    {
+      headers: {
+        authorization: `Basic ${Buffer.from(
+          process.env.CLOUDINARY_API_KEY +
+            ':' +
+            process.env.CLOUDINARY_API_SECRET
+        ).toString('base64')} `,
+      },
+    }
+  ).then((res) => res.json());
 
   return results || {};
 }
