@@ -1,10 +1,8 @@
 interface Options {
-  next_cursor?: string;
   [key: string]: any;
 }
 
 interface Params {
-  next_cursor?: string;
   [key: string]: any;
 }
 
@@ -16,11 +14,6 @@ export async function search(
     ...options,
   };
 
-  if (options && options.nextCursor) {
-    params.next_cursor = options.nextCursor;
-    delete params.nextCursor;
-  }
-
   if (options && options.folderName) {
     params.prefix = options.folderName;
   }
@@ -29,15 +22,11 @@ export async function search(
     .map((key) => `${key}=${encodeURIComponent(params[key])}`)
     .join('&');
 
-  console.log('options', options);
-
   let url = `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`;
   if (options && options.folderName) {
     url += `/${options.folderName}`;
   }
   url += `?${paramString}`;
-
-  console.log('url', url);
 
   const results = await fetch(url, {
     headers: {

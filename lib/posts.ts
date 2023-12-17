@@ -17,7 +17,7 @@ export interface GetAllPostIds {
 
 export async function getSortedPostsData(): Promise<PostData[]> {
   const fileNames: string[] = fs.readdirSync(postsDirectory);
-  const allPostsData: Promise<PostData>[] = fileNames.map(async fileName => {
+  const allPostsData: Promise<PostData>[] = fileNames.map(async (fileName) => {
     const id = fileName.replace(/\.md$/, '');
 
     const fullPath = path.join(postsDirectory, fileName);
@@ -54,7 +54,7 @@ export async function getSortedPostsData(): Promise<PostData[]> {
 export function getAllPostIds(): { params: { id: string } }[] {
   const fileNames = fs.readdirSync(postsDirectory);
 
-  return fileNames.map(fileName => {
+  return fileNames.map((fileName) => {
     return {
       params: {
         id: fileName.replace(/\.md$/, ''),
@@ -77,8 +77,6 @@ export async function getPostData(id: string) {
     .use(prism)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
-
-  // console.log(matterResult.data, 'hello');
 
   // Combine the data with the id
   return {
