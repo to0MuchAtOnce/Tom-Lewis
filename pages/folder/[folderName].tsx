@@ -1,9 +1,9 @@
 import { useState, MouseEvent, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { mapImageResources } from '../../lib/cloudinary';
 import Container from '../../components/Container';
+import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
 
 type CustomImage = {
   id: string;
@@ -29,6 +29,7 @@ const FolderName: NextPage<ImageProps> = ({
   const router = useRouter();
 
   const { folderName } = router.query;
+
   async function handleLoadMore(
     event: MouseEvent<HTMLButtonElement>
   ): Promise<void> {
@@ -38,6 +39,7 @@ const FolderName: NextPage<ImageProps> = ({
       const response = await fetch('/api/search', {
         method: 'POST',
         body: JSON.stringify({
+          folderName,
           nextCursor,
         }),
       });
@@ -50,7 +52,13 @@ const FolderName: NextPage<ImageProps> = ({
       const { resources, next_cursor: updatedNextCursor } = results;
       const mappedImages = mapImageResources(resources);
 
-      setImages((prev) => [...prev, ...mappedImages]);
+      const newImages = mappedImages.filter(
+        (newImage) => !images.find((image) => image.id === newImage.id)
+      );
+
+      console.log('newImages', newImages);
+
+      setImages((prev) => [...prev, ...newImages]);
       setNextCursor(updatedNextCursor);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -63,7 +71,9 @@ const FolderName: NextPage<ImageProps> = ({
       try {
         const response = await fetch('/api/search', {
           method: 'POST',
-          body: JSON.stringify({}),
+          body: JSON.stringify({
+            folderName: `${folderName}`,
+          }),
         });
 
         if (!response.ok) {
@@ -79,10 +89,10 @@ const FolderName: NextPage<ImageProps> = ({
         console.error('Error fetching data:', error);
       }
     })();
-  }, [folderName]);
+  }, []);
 
   return (
-    <Container title='Folder Name'>
+    <Container title={`${folderName}`}>
       {images &&
         images.map((image?: CustomImage) => {
           return (
@@ -107,3 +117,38 @@ const FolderName: NextPage<ImageProps> = ({
 };
 
 export default FolderName;
+
+export async function getStaticProps({
+  params,
+}: {
+  params: { folderName: string };
+}) {
+  const results = await search({ folderName: params.folderName });
+
+  const { resources, next_cursor: nextCursor } = results;
+  console.log('resources', resources);
+
+  const images = mapImageResources(resources);
+
+  return {
+    props: {
+      images: images || null,
+      nextCursor: (nextCursor as string) || null,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const data = await getFolders();
+  console.log('data', data);
+  const folders = data.folders || [];
+
+  const paths = folders.map((folder: { name: string }) => ({
+    params: { folderName: folder?.name },
+  }));
+
+  return {
+    paths,
+    fallback: true,
+  };
+}
