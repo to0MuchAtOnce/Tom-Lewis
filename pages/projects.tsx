@@ -16,12 +16,7 @@ const Projects: NextPage = () => {
           name='twitter:description'
           content='A place where you can keep up to date with my latest work'
         />
-        <meta
-          name='twitter:image'
-          width={50}
-          height={50}
-          content='/public/images/blue-dot.png'
-        />
+        <meta name='twitter:image' content='/public/images/blue-dot.png' />
       </Head>
       <Container title='Projects'>
         <div className='headingLg'>Projects</div>
