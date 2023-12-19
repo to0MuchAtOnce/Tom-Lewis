@@ -27,6 +27,7 @@ const Projects: NextPage = () => {
                 title={project.title}
                 content={project.content}
                 link={project.link}
+                showView={true}
               />
             </Cards>
           ))}

@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
     margin: 0;
     height: 100%;
     width: 100%;
-    background-color: ${props => props.theme.mainBg};
+    background-color: ${(props) => props.theme.mainBg};
 }
 
 a {
@@ -26,13 +26,13 @@ a {
 }
 
 .textLink {
-  color: ${props => props.theme.accent};
+  color: ${(props) => props.theme.accent};
   text-decoration: underline;
 }
 
 .textLink:hover {
-  color: ${props => props.theme.mainBg};
-  background: ${props => props.theme.accent};
+  color: ${(props) => props.theme.mainBg};
+  background: ${(props) => props.theme.accent};
   text-decoration: underline;
 }
 
@@ -75,7 +75,7 @@ a {
 }
 
 .listItem:hover {
-  color: ${props => props.theme.accent};
+  color: ${(props) => props.theme.accent};
   text-decoration: underline;
 }
 
@@ -83,13 +83,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 0;
 }
 
 .btn-small {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  border: 1px solid ${props => props.theme.cardBorder};
+  border: 1px solid ${(props) => props.theme.cardBorder};
   border-radius: 4px;
 }
 
@@ -112,16 +113,16 @@ a {
 }
 
 .footerIconColor {
-color: ${props => props.theme.footerIcon};
+color: ${(props) => props.theme.footerIcon};
 }
 
 .footerIconColor:hover {
-  color: ${props => props.theme.footerIconHover};
+  color: ${(props) => props.theme.footerIconHover};
 }
 
 .full-stop {
     font-size: 1rem;
-    color: ${props => props.theme.accent};
+    color: ${(props) => props.theme.accent};
     font-weight: 900;
   }
 

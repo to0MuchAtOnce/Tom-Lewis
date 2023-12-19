@@ -53,7 +53,33 @@ export async function getFolders(): Promise<Params> {
     }
   ).then((res) => res.json());
 
-  return results || {};
+  for (let folder of results.folders) {
+    folder.firstImage = await getFirstImageFromFolder(folder.name);
+  }
+  return results;
+}
+
+export async function getFirstImageFromFolder(
+  folderName: string
+): Promise<string> {
+  const results = await fetch(
+    `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image/upload?prefix=${folderName}&max_results=1`,
+    {
+      headers: {
+        authorization: `Basic ${Buffer.from(
+          process.env.CLOUDINARY_API_KEY +
+            ':' +
+            process.env.CLOUDINARY_API_SECRET
+        ).toString('base64')} `,
+      },
+    }
+  ).then((res) => res.json());
+
+  if (results.resources && results.resources.length > 0) {
+    return results.resources[0].secure_url || {};
+  } else {
+    return '';
+  }
 }
 
 interface Resource {

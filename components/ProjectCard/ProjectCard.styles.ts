@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Cards = styled.div`
   display: flex;
   flex: 1;
-  background: ${props => props.theme.card};
-  color: ${props => props.theme.textDark};
-  border: 1px solid ${props => props.theme.cardBorder};
+  background: ${(props) => props.theme.card};
+  color: ${(props) => props.theme.textDark};
+  border: 1px solid ${(props) => props.theme.cardBorder};
   border-radius: 8px;
   padding: 15px;
   flex-wrap: wrap;
@@ -24,7 +24,7 @@ export const Cards = styled.div`
   }
 
   .cardTitle:hover {
-    color: ${props => props.theme.accent};
+    color: ${(props) => props.theme.accent};
     text-decoration: underline;
   }
 
