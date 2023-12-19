@@ -3,11 +3,12 @@ import Container from '../components/Container';
 import { getFolders } from '../lib/cloudinary';
 import Link from 'next/link';
 import Card from '../components/ProjectCard';
-import { Cards } from '@/components/ProjectCard/ProjectCard.styles';
+import { PhotoCards } from '@/components/PhotoCard/PhotoCard.styles';
 
 type CustomFolder = {
   name: string;
   path: string;
+  firstImage: string;
 };
 
 type FolderProps = {
@@ -19,30 +20,31 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
     <Container title='Photo'>
       <div className='headingLg'>Photo</div>
 
-      <ul className='photo-cards-container'>
+      <div className='photo-cards-container'>
         {folders &&
           folders.map((folder) => {
-            const linkTitle =
-              folder?.name.charAt(0).toUpperCase() + folder?.name.slice(1);
+            const linkTitle = folder?.name
+              ? folder?.name.charAt(0).toUpperCase() + folder?.name.slice(1)
+              : '';
             return (
-              <Cards key={folder?.name}>
+              <PhotoCards key={folder?.name}>
                 <Link href={`/folder/${folder?.path}`} passHref>
                   <a>
                     <Card
-                      image='/images/blue-dot.png'
+                      image={folder?.firstImage}
                       title={folder?.name}
                       path={folder?.path}
                     >
-                      <li className='list' key={folder?.path}>
+                      <div className='linkTitle' key={folder?.path}>
                         {linkTitle}
-                      </li>
+                      </div>
                     </Card>
                   </a>
                 </Link>
-              </Cards>
+              </PhotoCards>
             );
           })}
-      </ul>
+      </div>
     </Container>
   );
 };

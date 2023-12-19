@@ -15,7 +15,18 @@ interface CardProps {
 export const Card = ({ title, content, link, image, showView }: CardProps) => {
   return (
     <div className='card'>
-      {image && <Image src={image} width={50} height={50} alt={title} />}
+      <div className='photoCardImage'>
+        {image && (
+          <Image
+            className='photoCardImage'
+            width={0}
+            height={0}
+            sizes='100vw'
+            src={image}
+            alt={title}
+          />
+        )}
+      </div>
       <a
         href={link}
         target='_blank'

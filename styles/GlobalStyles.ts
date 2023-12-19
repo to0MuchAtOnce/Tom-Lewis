@@ -86,14 +86,6 @@ a {
   padding: 0;
 }
 
-.photo-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0 0 20px; 
-  margin: 0;
-}
-
 .btn-small {
   display: flex;
   justify-content: center;
