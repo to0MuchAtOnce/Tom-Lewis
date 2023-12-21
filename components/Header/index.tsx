@@ -55,11 +55,8 @@ export default function Header({ toggleTheme }: HeaderProps) {
           About
         </Link>
         <IconContext.Provider value={{ className: 'HeaderThemeIcon' }}>
-          <button
-            className='HeaderToggleThemeButton headerThemeIcon'
-            onClick={toggleTheme}
-          >
-            <MdDarkMode />
+          <button className='HeaderToggleThemeButton' onClick={toggleTheme}>
+            <MdDarkMode className='headerThemeIcon' />
           </button>
         </IconContext.Provider>
       </HeaderLinkContainer>
