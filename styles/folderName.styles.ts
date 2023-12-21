@@ -5,5 +5,6 @@ export const PhotoContainer = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    padding-bottom: 20px;
   }
 `;
