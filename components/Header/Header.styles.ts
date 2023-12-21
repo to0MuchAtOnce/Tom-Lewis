@@ -12,10 +12,7 @@ export const HeaderContainer = styled.header`
   background: ${(props) => props.theme.mainBg};
   height: 50px;
   color: ${(props) => props.theme.secondary};
-  @media (min-width: 1600px) {
-    display: none;
-    margin: 0;
-  }
+
   @media (max-width: 413px) {
     display: flex;
     justify-content: right;
@@ -62,20 +59,6 @@ export const HeaderLinkContainer = styled.div`
     color: ${(props) => props.theme.accent};
     font-weight: 500;
     text-decoration: underline;
-  }
-`;
-
-export const SidebarLogo = styled.div`
-  display: flex;
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 10px;
-
-  .LogoFullStop {
-    font-size: 1.5rem;
-    color: ${(props) => props.theme.accent};
-    font-weight: 900;
-    margin-left: 3px;
   }
 `;
 
