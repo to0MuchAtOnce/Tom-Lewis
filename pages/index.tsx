@@ -25,7 +25,7 @@ const Home: NextPage<HomeProps> = ({ allPostsData }) => {
         <ul className="list">
           {allPostsData.map(({ id, date, title }) => (
             <h3 className="listItem" key={id}>
-              <Link className="BlogLink" href={`/posts/${id}`}>{title}</Link>
+              <Link className="BlogLink" href={`/posts/${id}`} legacyBehavior>{title}</Link>
               <br />
               <small className="Date"> <Date dateString={date} /></small>
             </h3>

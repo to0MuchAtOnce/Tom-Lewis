@@ -1,8 +1,12 @@
-import Link from "next/link"
-import { MdDarkMode } from 'react-icons/md'
-import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter } from "react-icons/io5"
-import { IconContext } from "react-icons";
-import { SidebarFooterContainer, FlexContainer, ToggleThemeContainer } from "./SidebarFooter.styles";
+import Link from 'next/link';
+import { MdDarkMode } from 'react-icons/md';
+import { IoLogoLinkedin, IoLogoGithub, IoLogoTwitter } from 'react-icons/io5';
+import { IconContext } from 'react-icons';
+import {
+  SidebarFooterContainer,
+  FlexContainer,
+  ToggleThemeContainer,
+} from './SidebarFooter.styles';
 
 type SidebarFooterProps = {
   toggleTheme: () => void;
@@ -12,25 +16,44 @@ export default function SidebarFooter({ toggleTheme }: SidebarFooterProps) {
   return (
     <SidebarFooterContainer>
       <FlexContainer>
-        <Link href="https://www.linkedin.com/in/tom-lewis-a42566202/">
-          <a className="SidebarFooterMenuItem footerIconColor" target="_blank" rel="noopener noreferrer" ><IoLogoLinkedin /></a>
+        <Link
+          passHref
+          href='https://www.linkedin.com/in/tom-lewis-a42566202/'
+          className='SidebarFooterMenuItem footerIconColor'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <IoLogoLinkedin />
         </Link>
 
-        <Link href="https://github.com/to0MuchAtOnce/">
-          <a className="SidebarFooterMenuItem footerIconColor" target="_blank" rel="noopener noreferrer" ><IoLogoGithub /></a>
+        <Link
+          passHref
+          href='https://github.com/to0MuchAtOnce/'
+          className='SidebarFooterMenuItem footerIconColor'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <IoLogoGithub />
         </Link>
 
-        <Link href="https://twitter.com/UkkkirbTr/">
-          <a className="SidebarFooterMenuItem footerIconColor" target="_blank" rel="noopener noreferrer" ><IoLogoTwitter /></a>
+        <Link
+          passHref
+          href='https://twitter.com/UkkkirbTr/'
+          className='SidebarFooterMenuItem footerIconColor'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <IoLogoTwitter />
         </Link>
       </FlexContainer>
 
       <ToggleThemeContainer>
         <IconContext.Provider value={{ className: 'FooterThemeIcon' }}>
-          <button className="FooterThemeToggleBtn" onClick={toggleTheme}><MdDarkMode /></button>
+          <button className='FooterThemeToggleBtn' onClick={toggleTheme}>
+            <MdDarkMode />
+          </button>
         </IconContext.Provider>
       </ToggleThemeContainer>
     </SidebarFooterContainer>
-
-  )
+  );
 }

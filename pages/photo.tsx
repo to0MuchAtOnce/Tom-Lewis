@@ -29,17 +29,17 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
             return (
               <PhotoCards key={folder?.name}>
                 <Link href={`/folder/${folder?.path}`} passHref>
-                  <a>
-                    <Card
-                      image={folder?.firstImage}
-                      title={folder?.name}
-                      path={folder?.path}
-                    >
-                      <div className='linkTitle' key={folder?.path}>
-                        {linkTitle}
-                      </div>
-                    </Card>
-                  </a>
+
+                  <Card
+                    image={folder?.firstImage}
+                    title={folder?.name}
+                    path={folder?.path}
+                  >
+                    <div className='linkTitle' key={folder?.path}>
+                      {linkTitle}
+                    </div>
+                  </Card>
+
                 </Link>
               </PhotoCards>
             );

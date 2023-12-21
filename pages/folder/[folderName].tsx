@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Container from '../../components/Container';
 import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
+import { PhotoContainer } from '../../styles/folderName.styles';
 
 type CustomImage = {
   id: string;
@@ -54,17 +55,17 @@ const FolderName: NextPage<ImageProps> = ({ images: defaultImages }) => {
       {images &&
         images.map((image?: CustomImage) => {
           return (
-            <div key={image?.id}>
+            <PhotoContainer key={image?.id}>
               <a>
                 <Image
+                  className='photo'
                   width={image?.width}
                   height={image?.height}
                   src={image?.image ?? ''}
                   alt=''
                 />
               </a>
-              <h3>{image?.title}</h3>
-            </div>
+            </PhotoContainer>
           );
         })}
     </Container>

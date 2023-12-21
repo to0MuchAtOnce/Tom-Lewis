@@ -23,19 +23,17 @@ export default function MenuItem({
     toggleExpanded((prev) => !prev);
   };
 
-  return (
-    <>
-      <MenuItemContainer className={selected ? "selected" : ""} depth={depth}>
-        <Link href={url} passHref>
-          <div className="menu-item">
-            <span>{name}</span>
-          </div>
-        </Link>
-        {isNested ? (
-          <ExpandIcon isExpanded={isExpanded} handleClick={onClick} />
-        ) : null}
-      </MenuItemContainer>
-      {isExpanded && isNested ? <MenuItemsList options={subItems} /> : null}
-    </>
-  );
+  return <>
+    <MenuItemContainer className={selected ? "selected" : ""} depth={depth}>
+      <Link href={url} passHref legacyBehavior>
+        <div className="menu-item">
+          <span>{name}</span>
+        </div>
+      </Link>
+      {isNested ? (
+        <ExpandIcon isExpanded={isExpanded} handleClick={onClick} />
+      ) : null}
+    </MenuItemContainer>
+    {isExpanded && isNested ? <MenuItemsList options={subItems} /> : null}
+  </>;
 }
