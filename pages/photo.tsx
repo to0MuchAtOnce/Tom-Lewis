@@ -28,8 +28,8 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
               ? folder?.name.charAt(0).toUpperCase() + folder?.name.slice(1)
               : '';
             return (
-              <PhotoCards>
-                <div key={folder.id}>
+              <div key={folder.id}>
+                <PhotoCards>
                   <Link href={`/folder/${folder?.path}`} passHref>
                     <Card
                       image={folder?.firstImage}
@@ -41,8 +41,8 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
                       </div>
                     </Card>
                   </Link>
-                </div>
-              </PhotoCards>
+                </PhotoCards>
+              </div>
             );
           })}
       </div>

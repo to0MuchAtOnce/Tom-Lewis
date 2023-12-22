@@ -22,16 +22,16 @@ const Projects: NextPage = () => {
         <div className='headingLg'>Projects</div>
         <div className='cards-container'>
           {projects.map((project) => (
-            <Cards>
-              <div key={project.id}>
+            <div key={project.id}>
+              <Cards>
                 <Card
                   title={project.title}
                   content={project.content}
                   link={project.link}
                   showView={true}
                 />
-              </div>
-            </Cards>
+              </Cards>
+            </div>
           ))}
         </div>
       </Container>
