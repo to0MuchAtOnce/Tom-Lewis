@@ -9,7 +9,7 @@ export const PhotoCards = styled(ProjectCard)`
   }
 
   .photoCardImage {
-    width: 94vw;
+    width: 100%;
     height: auto;
     border-radius: 8px;
     max-width: 1064px;

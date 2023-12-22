@@ -39,24 +39,46 @@ export async function search(
   return results || {};
 }
 
-export async function getFolders(): Promise<Params> {
-  const results = await fetch(
-    `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/folders`,
-    {
-      headers: {
-        authorization: `Basic ${Buffer.from(
-          process.env.CLOUDINARY_API_KEY +
-            ':' +
-            process.env.CLOUDINARY_API_SECRET
-        ).toString('base64')} `,
-      },
-    }
-  ).then((res) => res.json());
+let serverData: Params | null = null;
 
-  for (let folder of results.folders) {
-    folder.firstImage = await getFirstImageFromFolder(folder.name);
+interface Folder {
+  name: string;
+  firstImage?: string;
+}
+
+export async function getFolders(): Promise<Params> {
+  // If we already have the data from the server, use it
+  if (serverData) {
+    return serverData as Params;
   }
-  return results;
+
+  try {
+    const results = await fetch(
+      `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/folders`,
+      {
+        headers: {
+          authorization: `Basic ${Buffer.from(
+            process.env.CLOUDINARY_API_KEY +
+              ':' +
+              process.env.CLOUDINARY_API_SECRET
+          ).toString('base64')} `,
+        },
+      }
+    ).then((res) => res.json());
+
+    // If we already have the data from the server, use it
+    serverData = results;
+
+    const folderPromises = results.folders.map(async (folder: Folder) => {
+      folder.firstImage = await getFirstImageFromFolder(folder.name);
+    });
+
+    await Promise.all(folderPromises);
+    return serverData as Params;
+  } catch (error) {
+    // If the API call fails, return an empty Params object
+    return {} as Params;
+  }
 }
 
 export async function getFirstImageFromFolder(
