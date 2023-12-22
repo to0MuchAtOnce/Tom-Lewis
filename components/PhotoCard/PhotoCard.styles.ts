@@ -1,5 +1,5 @@
 import { Cards as ProjectCard } from './../ProjectCard/ProjectCard.styles';
-import styled, { Theme } from 'styled-components';
+import styled from 'styled-components';
 
 export const PhotoCards = styled(ProjectCard)`
   && {
@@ -13,6 +13,9 @@ export const PhotoCards = styled(ProjectCard)`
     height: auto;
     border-radius: 8px;
     max-width: 1064px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+  }
+
+  .card {
   }
 `;

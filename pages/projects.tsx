@@ -20,20 +20,18 @@ const Projects: NextPage = () => {
       </Head>
       <Container title='Projects'>
         <div className='headingLg'>Projects</div>
-        <div className='cards-container'>
-          {projects.map((project) => (
-            <div key={project.id}>
-              <Cards>
-                <Card
-                  title={project.title}
-                  content={project.content}
-                  link={project.link}
-                  showView={true}
-                />
-              </Cards>
-            </div>
-          ))}
-        </div>
+        {projects.map((project) => (
+          <div key={project.id} className='cards-container'>
+            <Cards>
+              <Card
+                title={project.title}
+                content={project.content}
+                link={project.link}
+                showView={true}
+              />
+            </Cards>
+          </div>
+        ))}
       </Container>
     </>
   );

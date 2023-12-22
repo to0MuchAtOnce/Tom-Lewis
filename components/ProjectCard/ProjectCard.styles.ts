@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Cards = styled.div`
-  display: flex;
   flex: 1;
   background: ${(props) => props.theme.card};
   color: ${(props) => props.theme.textDark};
   border: 1px solid ${(props) => props.theme.cardBorder};
   border-radius: 8px;
   padding: 15px;
+  margin-bottom: 15px;
   flex-wrap: wrap;
 
   .card {
@@ -16,6 +16,7 @@ export const Cards = styled.div`
     flex-direction: column;
     align-items: flex-start;
     min-width: 280px;
+    width: 100%;
   }
 
   .cardTitle {
