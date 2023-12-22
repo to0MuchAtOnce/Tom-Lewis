@@ -55,17 +55,19 @@ const FolderName: NextPage<ImageProps> = ({ images: defaultImages }) => {
       {images &&
         images.map((image?: CustomImage) => {
           return (
-            <PhotoContainer key={image?.id}>
-              <a>
-                <Image
-                  className='photo'
-                  width={image?.width}
-                  height={image?.height}
-                  src={image?.image ?? ''}
-                  alt=''
-                />
-              </a>
-            </PhotoContainer>
+            <div key={image?.id}>
+              <PhotoContainer>
+                <a>
+                  <Image
+                    className='photo'
+                    width={image?.width}
+                    height={image?.height}
+                    src={image?.image ?? ''}
+                    alt=''
+                  />
+                </a>
+              </PhotoContainer>
+            </div>
           );
         })}
     </Container>
