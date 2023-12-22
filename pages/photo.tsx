@@ -6,6 +6,7 @@ import Card from '../components/ProjectCard';
 import { PhotoCards } from '@/components/PhotoCard/PhotoCard.styles';
 
 type CustomFolder = {
+  id: string;
   name: string;
   path: string;
   firstImage: string;
@@ -28,17 +29,19 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
               : '';
             return (
               <PhotoCards>
-                <Link href={`/folder/${folder?.path}`} passHref>
-                  <Card
-                    image={folder?.firstImage}
-                    title={folder?.name}
-                    path={folder?.path}
-                  >
-                    <div className='linkTitle' key={folder?.path}>
-                      {linkTitle}
-                    </div>
-                  </Card>
-                </Link>
+                <div key={folder.id}>
+                  <Link href={`/folder/${folder?.path}`} passHref>
+                    <Card
+                      image={folder?.firstImage}
+                      title={folder?.name}
+                      path={folder?.path}
+                    >
+                      <div className='linkTitle' key={folder?.path}>
+                        {linkTitle}
+                      </div>
+                    </Card>
+                  </Link>
+                </div>
               </PhotoCards>
             );
           })}

@@ -15,6 +15,4 @@ export const PhotoCards = styled(ProjectCard)`
     max-width: 1064px;
     margin-bottom: 10px;
   }
-  .card {
-  }
 `;

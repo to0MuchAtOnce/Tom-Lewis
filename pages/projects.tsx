@@ -2,7 +2,7 @@ import Head from 'next/head';
 import type { NextPage } from 'next';
 import { projects } from '../pages/api/ProjectsData';
 import Card from '../components/ProjectCard';
-import { Cards } from '@/components/ProjectCard/ProjectCard.styles';
+import { Cards } from '../components/ProjectCard/ProjectCard.styles';
 import Container from '../components/Container';
 
 const Projects: NextPage = () => {
@@ -23,12 +23,14 @@ const Projects: NextPage = () => {
         <div className='cards-container'>
           {projects.map((project) => (
             <Cards>
-              <Card
-                title={project.title}
-                content={project.content}
-                link={project.link}
-                showView={true}
-              />
+              <div key={project.id}>
+                <Card
+                  title={project.title}
+                  content={project.content}
+                  link={project.link}
+                  showView={true}
+                />
+              </div>
             </Cards>
           ))}
         </div>
