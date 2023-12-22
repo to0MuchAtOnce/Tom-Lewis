@@ -22,7 +22,7 @@ const Projects: NextPage = () => {
         <div className='headingLg'>Projects</div>
         <div className='cards-container'>
           {projects.map((project) => (
-            <Cards key={project.id}>
+            <Cards>
               <Card
                 title={project.title}
                 content={project.content}

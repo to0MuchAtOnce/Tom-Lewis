@@ -1,5 +1,5 @@
 import { Cards as ProjectCard } from './../ProjectCard/ProjectCard.styles';
-import styled from 'styled-components';
+import styled, { Theme } from 'styled-components';
 
 export const PhotoCards = styled(ProjectCard)`
   && {

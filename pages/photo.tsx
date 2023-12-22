@@ -27,9 +27,8 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
               ? folder?.name.charAt(0).toUpperCase() + folder?.name.slice(1)
               : '';
             return (
-              <PhotoCards key={folder?.name}>
+              <PhotoCards>
                 <Link href={`/folder/${folder?.path}`} passHref>
-
                   <Card
                     image={folder?.firstImage}
                     title={folder?.name}
@@ -39,7 +38,6 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
                       {linkTitle}
                     </div>
                   </Card>
-
                 </Link>
               </PhotoCards>
             );
