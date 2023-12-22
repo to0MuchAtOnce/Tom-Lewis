@@ -15,7 +15,6 @@ declare module 'styled-components' {
     greyBg: string;
     themeBtn: string;
     themeIcon: string;
-    sidebarborder: string;
     accent: string;
     footerIcon: string;
     footerIconHover: string;
@@ -36,7 +35,6 @@ export const LightTheme: DefaultTheme = {
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#6590ab',
-  sidebarBorder: '#b1b1b1',
   accent: '#6590ab',
   footerIcon: '#737373',
   footerIconHover: '#4c96c1',
@@ -56,7 +54,6 @@ export const DarkTheme: DefaultTheme = {
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#6590ab',
-  sidebarBorder: '#5e5e5e',
   accent: '#6590ab',
   footerIcon: '#737373',
   footerIconHover: '#4c96c1',

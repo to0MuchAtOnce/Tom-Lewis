@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Container from '../../components/Container';
 import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
 import { PhotoContainer } from '../../styles/folderName.styles';
+import Link from 'next/link';
 
 type CustomImage = {
   id: string;
