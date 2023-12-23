@@ -10,11 +10,26 @@ interface CardProps {
   image?: string;
   path?: string;
   showView?: boolean;
+  showPhotoTitle?: boolean;
+  showCategory?: boolean;
+  categoryType?: string;
   children?: React.ReactNode;
+  color?: string;
 }
 
-export const Card = ({ title, content, link, image, showView }: CardProps) => {
+export const Card = ({
+  title,
+  content,
+  link,
+  image,
+  showView,
+  showPhotoTitle,
+  showCategory,
+  categoryType,
+  color,
+}: CardProps) => {
   return (
+    // ProjectCard & photoCard use this component
     <div className='card'>
       <div className='photoCardImage'>
         {image && (
@@ -28,15 +43,24 @@ export const Card = ({ title, content, link, image, showView }: CardProps) => {
           />
         )}
       </div>
+      <div className='photoCardInfo'>
+        {showPhotoTitle && <h2 className='photoCardTitle'>{title}</h2>}
+        {showCategory && (
+          <div className='photoCategory' style={{ background: color }}>
+            {categoryType}
+          </div>
+        )}
+      </div>
       {link && (
-        <div className='cardTitle'>
+        <div className='projectCardTitle'>
           <Link href={link} target='_blank' rel='noopener noreferrer'>
             {title}
           </Link>
         </div>
       )}
-
-      <p>{content}</p>
+      <div>
+        <p>{content}</p>
+      </div>
 
       {showView && (
         <div className='btn-small'>

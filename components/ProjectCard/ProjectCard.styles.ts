@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Cards = styled.div`
   flex: 1;
-  background: ${(props) => props.theme.card};
+  background: ${(props) => props.theme.cardBackground};
   color: ${(props) => props.theme.textDark};
   border: 1px solid ${(props) => props.theme.cardBorder};
   border-radius: 8px;
@@ -19,7 +19,7 @@ export const Cards = styled.div`
     width: 100%;
   }
 
-  .cardTitle {
+  .projectCardTitle {
     font-size: 18px;
     margin: 0;
   }

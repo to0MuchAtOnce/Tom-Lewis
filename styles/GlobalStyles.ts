@@ -1,7 +1,7 @@
-import { createGlobalStyle, Theme } from 'styled-components';
+import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
 interface GlobalStylesProps {
-  theme: Theme;
+  theme: DefaultTheme;
 }
 
 export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
