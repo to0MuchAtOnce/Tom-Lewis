@@ -30,15 +30,15 @@ export const PostContainer = styled.div`
   }
 
   .inline-code {
-    background: ${props => props.theme.codeBgInline};
-    color: ${props => props.theme.codeTextInline};
-    border: 1px solid ${props => props.theme.codeBorderInline};
+    background: ${(props) => props.theme.codeBgInline};
+    color: ${(props) => props.theme.codeTextInline};
+    border: 1px solid ${(props) => props.theme.codeBorderInline};
     border-radius: 5px;
     padding: 0.15rem 0.21rem;
   }
 
   .post-link {
-    color: ${props => props.theme.accent};
+    color: ${(props) => props.theme.accent};
     text-decoration: underline;
   }
 
