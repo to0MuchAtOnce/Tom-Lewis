@@ -62,16 +62,14 @@ const BlindSeries: NextPage<BlindSeriesProps> = ({ folder }) => {
               customStyle?: string;
             };
             return (
-              <div className='largeImageContainer'>
-                <div key={image.id}>
-                  <Image
-                    className={`${image.customStyle || ''}`}
-                    src={image.image}
-                    alt={image.title}
-                    width={image.width}
-                    height={image.height}
-                  />
-                </div>
+              <div key={image.id} className='largeImageContainer'>
+                <Image
+                  className={`${image.customStyle || ''}`}
+                  src={image.image}
+                  alt={image.title}
+                  width={image.width}
+                  height={image.height}
+                />
               </div>
             );
           } else if (block.type === 'smallImages') {
