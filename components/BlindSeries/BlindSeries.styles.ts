@@ -9,13 +9,19 @@ export const PageLayoutContainer = styled.div`
 
   .largeImage {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-height: 680px;
+    margin: 10px 0;
   }
 
   .smallImage {
     width: 32.4%;
     height: 32.4%;
     margin: 14px;
+  }
+
+  .headingLg {
+    margin-bottom: 0;
   }
 
   .smallImage:first-child {
@@ -71,18 +77,17 @@ export const PageLayoutContainer = styled.div`
   }
 
   @media screen and (max-width: 500px) {
+    .largeImage {
+      margin: 0;
+    }
+
     .smallImage {
       width: 32%;
       height: 32%;
-      margin: 10px;
+      margin: 10px 10px;
     }
 
-    .smallImage:first-child {
-      width: 32%;
-      height: 32%;
-      margin: 10px 0;
-    }
-
+    .smallImage:first-child,
     .smallImage:last-child {
       width: 32%;
       height: 32%;

@@ -13,6 +13,7 @@ type CustomImage = {
   width: number;
   height: number;
   image: string;
+  folder: string;
 };
 
 type ImageProps = {
@@ -52,7 +53,7 @@ const FolderName: NextPage<ImageProps> = ({ images: defaultImages }) => {
   }, [folderName]);
 
   if (folderName === 'blind') {
-    return <BlindSeries />;
+    return <BlindSeries folder={{ type: 'Series' }} />;
   }
 
   return (

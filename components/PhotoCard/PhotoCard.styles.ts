@@ -29,10 +29,11 @@ export const PhotoCards = styled(ProjectCard)`
   }
 
   .photoCategory {
+    cursor: pointer;
     color: ${(props) => props.theme.border};
     border: 0.5px solid ${(props) => props.theme.border};
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 200;
     padding: 4px 5px;
     margin: 0 3px 0 0;

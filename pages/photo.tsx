@@ -10,10 +10,7 @@ type CustomFolder = {
   name: string;
   path: string;
   firstImage: string;
-  showPhotoTitle: boolean;
-  showCategory: boolean;
   type: string;
-  color: string;
 };
 
 type FolderProps = {

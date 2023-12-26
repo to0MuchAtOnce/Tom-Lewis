@@ -26,7 +26,6 @@ export const Card = ({
   showPhotoTitle,
   showCategory,
   categoryType,
-  color,
 }: CardProps) => {
   return (
     // ProjectCard & photoCard use this component
