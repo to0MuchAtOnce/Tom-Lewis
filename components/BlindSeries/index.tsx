@@ -133,7 +133,7 @@ const BlindSeries: NextPage<BlindSeriesProps> = () => {
         <div className='headingLg'>Blind</div>
         {newPageLayout.map((block, index) => {
           if (block.type === 'text') {
-            return <p key={index}>{block.content}</p>;
+            return <p key={`${block.type}-${index}`}>{block.content}</p>;
           } else if (block.type === 'image') {
             const image = block.content as {
               id: string;
@@ -156,7 +156,10 @@ const BlindSeries: NextPage<BlindSeriesProps> = () => {
             );
           } else if (block.type === 'smallImages') {
             return (
-              <div key={index} className='smallImageContainer'>
+              <div
+                key={`${block.type}-${index}`}
+                className='smallImageContainer'
+              >
                 {block.content.map((imageBlock: any) => {
                   const image = imageBlock.content as {
                     id: string;
@@ -169,7 +172,7 @@ const BlindSeries: NextPage<BlindSeriesProps> = () => {
                   return (
                     <Image
                       className={`${image.customStyle || ''}`}
-                      key={image.id}
+                      key={`${block.type}-${image.id}`}
                       src={image.image}
                       alt={image.title}
                       width={image.width}

@@ -50,6 +50,26 @@ export const PageLayoutContainer = styled.div`
     }
   }
 
+  @media screen and (max-width: 620px) {
+    .smallImage {
+      width: 31%;
+      height: 31%;
+      margin: 10px;
+    }
+
+    .smallImage:first-child {
+      width: 31%;
+      height: 31%;
+      margin: 10px 0;
+    }
+
+    .smallImage:last-child {
+      width: 31%;
+      height: 31%;
+      margin: 10px 0;
+    }
+  }
+
   @media screen and (max-width: 500px) {
     .smallImage {
       width: 32%;
