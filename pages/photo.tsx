@@ -4,7 +4,6 @@ import { getFolders } from '../lib/cloudinary';
 import Link from 'next/link';
 import Card from '../components/ProjectCard';
 import { PhotoCards } from '@/components/PhotoCard/PhotoCard.styles';
-import { useTheme } from 'styled-components';
 
 type CustomFolder = {
   id: string;
@@ -22,7 +21,6 @@ type FolderProps = {
 };
 
 const Photo: NextPage<FolderProps> = ({ folders }) => {
-  const theme = useTheme();
   return (
     <Container title='Photo'>
       <div className='headingLg'>Photo</div>
@@ -33,15 +31,8 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
             const linkTitle = folder?.name
               ? folder?.name.charAt(0).toUpperCase() + folder?.name.slice(1)
               : '';
-            const color =
-              folder.type === 'Series'
-                ? theme.categorySeries
-                : folder.type === 'Album'
-                ? theme.categoryAlbum
-                : '';
-            console.log('folder type:', folder.type);
             return (
-              <div key={folder.id} className='photoCategory'>
+              <div key={folder.id}>
                 <PhotoCards>
                   <Link href={`/folder/${folder?.path}`} passHref>
                     <Card
@@ -50,7 +41,6 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
                       showCategory={true}
                       categoryType={folder.type}
                       title={linkTitle}
-                      color={color}
                     />
                   </Link>
                 </PhotoCards>

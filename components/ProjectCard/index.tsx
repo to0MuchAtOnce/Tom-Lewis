@@ -45,11 +45,7 @@ export const Card = ({
       </div>
       <div className='photoCardInfo'>
         {showPhotoTitle && <h2 className='photoCardTitle'>{title}</h2>}
-        {showCategory && (
-          <div className='photoCategory' style={{ background: color }}>
-            {categoryType}
-          </div>
-        )}
+        {showCategory && <div className='photoCategory'>{categoryType}</div>}
       </div>
       {link && (
         <div className='projectCardTitle'>

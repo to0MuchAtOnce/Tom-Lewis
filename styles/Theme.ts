@@ -6,6 +6,7 @@ declare module 'styled-components' {
     primary: string;
     secondary: string;
     white: string;
+    border: string;
     cardBorder: string;
     cardBackground: string;
     textDark: string;
@@ -14,8 +15,6 @@ declare module 'styled-components' {
     codeBgInline: string;
     codeTextInline: string;
     codeBorderInline: string;
-    categorySeries: string;
-    categoryAlbum: string;
     greyBg: string;
     themeBtn: string;
     themeIcon: string;
@@ -29,6 +28,7 @@ export const LightTheme: DefaultTheme = {
   primary: '#292a3b',
   secondary: '#696969',
   white: '#ffffff',
+  border: '#9d9d9d',
   cardBackground: '#ffffff',
   cardBorder: '#e0e0e0',
   textDark: '#4e4e4e',
@@ -37,8 +37,6 @@ export const LightTheme: DefaultTheme = {
   codeBgInline: '#7b7b7b',
   codeTextInline: '#FFF',
   codeBorderInline: '#6c6a6a',
-  categorySeries: '#7d44a3ff',
-  categoryAlbum: '#346d25ff',
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#6590ab',
@@ -51,6 +49,7 @@ export const DarkTheme: DefaultTheme = {
   primary: '#292a3b',
   secondary: '#dedede',
   white: '#ffffff',
+  border: '#9d9d9d',
   cardBackground: '#2e3135',
   cardBorder: '#606060',
   textDark: '#d3d3d3',
@@ -59,8 +58,6 @@ export const DarkTheme: DefaultTheme = {
   codeBgInline: '#353536',
   codeTextInline: '#D3D3D3',
   codeBorderInline: '#555657',
-  categorySeries: '#7d44a3ff',
-  categoryAlbum: '#346d25ff',
   greyBg: '#d8dcd6',
   themeBtn: '#737373',
   themeIcon: '#6590ab',

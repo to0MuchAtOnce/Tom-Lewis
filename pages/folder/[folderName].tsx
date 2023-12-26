@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Container from '../../components/Container';
+import Container from '@/components/Container';
 import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
 import { PhotoContainer } from '../../styles/folderName.styles';
-import Link from 'next/link';
+import BlindSeries from '@/components/BlindSeries';
 
 type CustomImage = {
   id: string;
@@ -25,6 +25,10 @@ const FolderName: NextPage<ImageProps> = ({ images: defaultImages }) => {
   const router = useRouter();
 
   const { folderName } = router.query;
+
+  if (folderName === 'blind') {
+    return <BlindSeries />;
+  } else 'No images to display';
 
   useEffect(() => {
     (async function fetchImages() {
