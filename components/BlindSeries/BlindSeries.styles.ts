@@ -50,22 +50,22 @@ export const PageLayoutContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: 500px) {
     .smallImage {
-      width: 31%;
-      height: 31%;
+      width: 32%;
+      height: 32%;
       margin: 10px;
     }
 
     .smallImage:first-child {
-      width: 31%;
-      height: 31%;
+      width: 32%;
+      height: 32%;
       margin: 10px 0;
     }
 
     .smallImage:last-child {
-      width: 31%;
-      height: 31%;
+      width: 32%;
+      height: 32%;
       margin: 10px 0;
     }
   }

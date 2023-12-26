@@ -90,6 +90,23 @@ const pageLayout = [
       customStyle: 'smallImage',
     },
   },
+  {
+    type: 'text',
+    content:
+      'Qui ullam doloribus quos. Exercitationem odio qui placeat voluptatem et in repellendus. Corrupti omnis modi officia sed debitis nobis ut. Rerum eveniet et est earum doloremque et odit dolores illum. Blanditiis non quo qui illum occaecati. Dolore et numquam cupiditate recusandae quis. Culpa et repudiandae. Est expedita numquam excepturi ut. Enim rerum sunt ut molestiae minima laboriosam. Qui ut dolores assumenda natus eaque ipsa',
+  },
+  {
+    type: 'image',
+    content: {
+      id: '6',
+      title: 'Third Image',
+      width: 4000,
+      height: 4000,
+      image:
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1702735029/blind/gbwv2dcfrmcrtdxjvxva.jpg',
+      customStyle: 'largeImage',
+    },
+  },
 ];
 
 const BlindSeries: NextPage<BlindSeriesProps> = () => {

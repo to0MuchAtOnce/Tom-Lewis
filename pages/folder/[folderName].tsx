@@ -26,10 +26,6 @@ const FolderName: NextPage<ImageProps> = ({ images: defaultImages }) => {
 
   const { folderName } = router.query;
 
-  if (folderName === 'blind') {
-    return <BlindSeries />;
-  } else 'No images to display';
-
   useEffect(() => {
     (async function fetchImages() {
       try {
@@ -54,6 +50,10 @@ const FolderName: NextPage<ImageProps> = ({ images: defaultImages }) => {
       }
     })();
   }, [folderName]);
+
+  if (folderName === 'blind') {
+    return <BlindSeries />;
+  }
 
   return (
     <Container title={`${folderName}`}>
