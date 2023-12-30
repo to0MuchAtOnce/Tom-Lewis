@@ -27,7 +27,7 @@ export default function Footer() {
 
       <Link
         passHref
-        href='https://twitter.com/UkkkirbTr/'
+        href='https://twitter.com/to0MuchAtOnce'
         className='FooterMenuItem footerIconColor'
         target='_blank'
         rel='noopener noreferrer'
