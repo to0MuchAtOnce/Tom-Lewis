@@ -13,11 +13,11 @@ export const blindData: BlindData[] = [
     type: 'image',
     content: {
       id: '1',
-      title: 'First Image',
+      title: 'blind01',
       width: 2000,
       height: 2000,
       image:
-        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704016560/blind/yolo92muguonwvvmeu4z.jpg',
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028107/blind/fsshah18eaxiogazyndz.jpg',
       customStyle: 'largeImage',
     },
   },
@@ -30,11 +30,11 @@ export const blindData: BlindData[] = [
     type: 'image',
     content: {
       id: '2',
-      title: 'Second Image',
+      title: 'blind02',
       width: 2000,
       height: 2000,
       image:
-        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704016560/blind/yolo92muguonwvvmeu4z.jpg',
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028111/blind/hjblvh500ngdij1ajagm.jpg',
       customStyle: 'largeImage',
     },
   },
@@ -42,11 +42,11 @@ export const blindData: BlindData[] = [
     type: 'image',
     content: {
       id: '3',
-      title: 'First Image small',
+      title: 'blind03',
       width: 500,
       height: 500,
       image:
-        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1702735040/blind/ljddhbbelngwf4efztoz.jpg',
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028113/blind/fnukzyftsbvjdtxnv2ze.jpg',
       customStyle: 'smallImage',
     },
   },
@@ -54,11 +54,11 @@ export const blindData: BlindData[] = [
     type: 'image',
     content: {
       id: '4',
-      title: 'Second Image small',
+      title: 'blind04',
       width: 500,
       height: 500,
       image:
-        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1702735034/blind/xekd4ubaekjfljehnnws.jpg',
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028109/blind/lllkf5haw0iketewqpav.jpg',
       customStyle: 'smallImage',
     },
   },
@@ -66,11 +66,11 @@ export const blindData: BlindData[] = [
     type: 'image',
     content: {
       id: '5',
-      title: 'Third Image small',
+      title: 'blind05',
       width: 500,
       height: 500,
       image:
-        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1702735023/blind/eta8j4rwkpdaad0rs6hs.jpg',
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028115/blind/fvgyr5pyysrbt9w4ufza.jpg',
       customStyle: 'smallImage',
     },
   },
@@ -83,11 +83,71 @@ export const blindData: BlindData[] = [
     type: 'image',
     content: {
       id: '6',
-      title: 'Third Image',
+      title: 'Blind06',
       width: 4000,
       height: 4000,
       image:
-        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1702735029/blind/gbwv2dcfrmcrtdxjvxva.jpg',
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028115/blind/uykpadaaroimddayg9hr.jpg',
+      customStyle: 'largeImage',
+    },
+  },
+  {
+    type: 'image',
+    content: {
+      id: '7',
+      title: 'Blind07',
+      width: 4000,
+      height: 4000,
+      image:
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028111/blind/j9i4gtfesxx0uneaxw5n.jpg',
+      customStyle: 'largeImage',
+    },
+  },
+  {
+    type: 'image',
+    content: {
+      id: '8',
+      title: 'Blind08',
+      width: 4000,
+      height: 4000,
+      image:
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028114/blind/omuvke191viluff9zgwy.jpg',
+      customStyle: 'largeImage',
+    },
+  },
+  {
+    type: 'image',
+    content: {
+      id: '9',
+      title: 'Blind09',
+      width: 4000,
+      height: 4000,
+      image:
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028116/blind/acqrfs57gsqaeqcmcjrf.jpg',
+      customStyle: 'largeImage',
+    },
+  },
+  {
+    type: 'image',
+    content: {
+      id: '10',
+      title: 'Blind010',
+      width: 4000,
+      height: 4000,
+      image:
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028112/blind/cezcxktyuxmwcqhlr00s.jpg',
+      customStyle: 'largeImage',
+    },
+  },
+  {
+    type: 'image',
+    content: {
+      id: '11',
+      title: 'Blind011',
+      width: 4000,
+      height: 4000,
+      image:
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704028114/blind/odonzbfuzlgr9o8onxjr.jpg',
       customStyle: 'largeImage',
     },
   },
