@@ -24,11 +24,11 @@ declare module 'styled-components' {
 }
 
 export const LightTheme: DefaultTheme = {
-  accent: '#6590ab',
+  accent: '#426b85',
   primary: '#292a3b',
   secondary: '#696969',
   white: '#ffffff',
-  border: '#9d9d9d',
+  border: '#676666',
   cardBackground: '#ffffff',
   cardBorder: '#e0e0e0',
   textDark: '#4e4e4e',
@@ -45,11 +45,11 @@ export const LightTheme: DefaultTheme = {
 };
 
 export const DarkTheme: DefaultTheme = {
-  accent: '#6590ab',
+  accent: '#67abd5',
   primary: '#292a3b',
   secondary: '#dedede',
   white: '#ffffff',
-  border: '#9d9d9d',
+  border: '#b4b4b4',
   cardBackground: '#2e3135',
   cardBorder: '#606060',
   textDark: '#d3d3d3',
