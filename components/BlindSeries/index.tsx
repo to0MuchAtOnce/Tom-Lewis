@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Container from '@/components/Container';
 import Card from '@/components/ProjectCard';
 import { PageLayoutContainer } from './BlindSeries.styles';
-import { pageLayout } from '@/pages/api/BlindData';
+import { blindData } from '@/pages/api/BlindData';
 import { PhotoCards } from '../PhotoCard/PhotoCard.styles';
 
 type CustomData = {
@@ -26,7 +26,7 @@ interface BlindSeriesProps {
 
 const BlindSeries: NextPage<BlindSeriesProps> = ({ folder }) => {
   const smallImages: any[] = [];
-  const newPageLayout = pageLayout.reduce((acc, block) => {
+  const data = blindData.reduce((acc, block) => {
     if (
       block.type === 'image' &&
       typeof block.content !== 'string' &&
@@ -49,7 +49,7 @@ const BlindSeries: NextPage<BlindSeriesProps> = ({ folder }) => {
         <PhotoCards>
           <Card categoryType={folder.type} title='Series' showCategory={true} />
         </PhotoCards>
-        {newPageLayout.map((block, index) => {
+        {data.map((block, index) => {
           if (block.type === 'text') {
             return <p key={`${block.type}-${index}`}>{block.content}</p>;
           } else if (block.type === 'image') {

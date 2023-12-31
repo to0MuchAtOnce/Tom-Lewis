@@ -1,9 +1,9 @@
-export interface PageLayout {
+export interface BlindData {
   type: string;
   content: any;
 }
 
-export const pageLayout: PageLayout[] = [
+export const blindData: BlindData[] = [
   {
     type: 'text',
     content:
@@ -17,7 +17,7 @@ export const pageLayout: PageLayout[] = [
       width: 2000,
       height: 2000,
       image:
-        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1702737562/blind/DSC_0883_bya6as.jpg',
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704016560/blind/yolo92muguonwvvmeu4z.jpg',
       customStyle: 'largeImage',
     },
   },
@@ -34,7 +34,7 @@ export const pageLayout: PageLayout[] = [
       width: 2000,
       height: 2000,
       image:
-        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1702736508/blind/sjt6vzbz5kxym3zbg1cp.jpg',
+        'https://res.cloudinary.com/tomlewisphoto/image/upload/v1704016560/blind/yolo92muguonwvvmeu4z.jpg',
       customStyle: 'largeImage',
     },
   },

@@ -126,7 +126,7 @@ color: ${(props) => props.theme.footerIcon};
     font-weight: 900;
   }
 
-@media (max-width: 700px) {
+@media (max-width: 400px) {
   .Date {
     display: none;
   }
