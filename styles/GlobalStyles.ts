@@ -83,7 +83,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 0;
 }
 
 .btn-small {
