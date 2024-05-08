@@ -29,19 +29,18 @@ export const PhotoCards = styled(ProjectCard)`
   }
 
   .photoCategory {
-    color: ${(props) => props.theme.textLight};
+    cursor: pointer;
+    color: ${(props) => props.theme.border};
+    border: 0.5px solid ${(props) => props.theme.border};
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 200;
     padding: 4px 5px;
     margin: 0 3px 0 0;
   }
 
-  .photoCategory.series {
-    background: red;
-  }
-
-  .photoCategory.album {
-    background: red;
+  .photoCategory:hover {
+    color: ${(props) => props.theme.accent};
+    border: 0.5px solid ${(props) => props.theme.accent};
   }
 `;

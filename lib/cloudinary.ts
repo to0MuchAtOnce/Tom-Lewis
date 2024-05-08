@@ -110,6 +110,7 @@ interface Resource {
   secure_url: string;
   width: number;
   height: number;
+  folder: string;
 }
 
 interface ImageResource {
@@ -118,6 +119,7 @@ interface ImageResource {
   image: string;
   width: number;
   height: number;
+  folder: string;
 }
 
 export function mapImageResources(resources?: Resource[]): ImageResource[] {
@@ -126,13 +128,14 @@ export function mapImageResources(resources?: Resource[]): ImageResource[] {
   }
 
   return resources.map((resource: Resource) => {
-    const { width, height } = resource;
+    const { width, height, folder } = resource;
     return {
       id: resource.asset_id,
       title: resource.public_id,
       image: resource.secure_url,
       width,
       height,
+      folder,
     };
   });
 }
