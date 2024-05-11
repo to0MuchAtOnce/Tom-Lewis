@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import 'prismjs/themes/prism-tomorrow.css';
 import DashboardLayout from '../components/DashboardLayout/DashboardLayout';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
@@ -39,6 +40,7 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
       <DashboardLayout toggleTheme={toggleTheme}>
         <Component {...pageProps} />
         <Analytics />
+        <SpeedInsights />
       </DashboardLayout>
     </ThemeProvider>
   );
