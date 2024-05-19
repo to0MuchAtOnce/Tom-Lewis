@@ -6,6 +6,7 @@ export const PostContainer = styled.div`
   }
 
   p {
+    font-size: 1em;
     line-height: 1.33;
     letter-spacing: 0.02rem;
     padding: 5px 0;
