@@ -10,14 +10,15 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   box-sizing: border-box;
 }
 
-  html,
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    background-color: ${(props) => props.theme.mainBg};
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: ${(props) => props.theme.mainBg};
+  font-size: 62.5%;
 }
 
 a {
@@ -42,7 +43,13 @@ a {
 }
 
 .headingXl {
-  margin-bottom: 5px;
+  font-size: 5.5em;
+  margin-bottom: 0.1em;
+}
+
+time {
+  font-size: 2.4em;
+  margin-left: 0.3em;
 }
 
 .headingLg {

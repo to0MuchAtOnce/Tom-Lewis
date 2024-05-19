@@ -5,11 +5,14 @@ export const PostContainer = styled.div`
     letter-spacing: 0.06rem;
   }
 
+  .PostDate {
+    color: red;
+  }
+
   p {
-    font-size: 1em;
+    font-size: 2.5em;
     line-height: 1.33;
     letter-spacing: 0.02rem;
-    padding: 5px 0;
   }
 
   ul li {
