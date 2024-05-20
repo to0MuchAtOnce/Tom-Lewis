@@ -93,6 +93,11 @@ time {
   gap: 1rem;
 }
 
+.para {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
 .btn-small {
   display: flex;
   justify-content: center;
