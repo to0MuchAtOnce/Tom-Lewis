@@ -18,7 +18,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: ${(props) => props.theme.mainBg};
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 a {
@@ -43,12 +43,12 @@ a {
 }
 
 .headingXl {
-  font-size: 5.5em;
-  margin-bottom: 0.1em;
+  font-size: 2.1em;
+  margin-bottom: -0.2em;
 }
 
 time {
-  font-size: 2.4em;
+  font-size: 1em;
   margin-left: 0.3em;
 }
 
@@ -75,8 +75,9 @@ time {
   justify-content: space-between;
   margin: 0;
   letter-spacing: 0.2px;
-  font-size: 16px;
-  font-weight: 400;
+  color: ${(props) => props.theme.boldHeading};
+  font-size: 1em;
+  font-weight: 500;
   border-bottom: 0.5px solid #959595;
   padding: 0.35em;
 }

@@ -5,6 +5,7 @@ declare module 'styled-components' {
     accent: string;
     primary: string;
     secondary: string;
+    boldHeading: string;
     white: string;
     border: string;
     cardBorder: string;
@@ -27,6 +28,7 @@ export const LightTheme: DefaultTheme = {
   accent: '#426b85',
   primary: '#292a3b',
   secondary: '#696969',
+  boldHeading: '#656565',
   white: '#ffffff',
   border: '#676666',
   cardBackground: '#ffffff',
@@ -48,6 +50,7 @@ export const DarkTheme: DefaultTheme = {
   accent: '#67abd5',
   primary: '#292a3b',
   secondary: '#dedede',
+  boldHeading: '#c5c5c5',
   white: '#ffffff',
   border: '#b4b4b4',
   cardBackground: '#2e3135',
