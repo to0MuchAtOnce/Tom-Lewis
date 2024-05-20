@@ -10,14 +10,15 @@ export const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   box-sizing: border-box;
 }
 
-  html,
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    background-color: ${(props) => props.theme.mainBg};
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: ${(props) => props.theme.mainBg};
+  font-size: 100%;
 }
 
 a {
@@ -42,7 +43,13 @@ a {
 }
 
 .headingXl {
-  margin-bottom: 5px;
+  font-size: 2.1em;
+  margin-bottom: -0.2em;
+}
+
+time {
+  font-size: 1em;
+  margin-left: 0.3em;
 }
 
 .headingLg {
@@ -68,8 +75,9 @@ a {
   justify-content: space-between;
   margin: 0;
   letter-spacing: 0.2px;
-  font-size: 16px;
-  font-weight: 400;
+  color: ${(props) => props.theme.boldHeading};
+  font-size: 1em;
+  font-weight: 500;
   border-bottom: 0.5px solid #959595;
   padding: 0.35em;
 }
@@ -83,6 +91,11 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.para {
+  font-size: 1em;
+  line-height: 1.6em;
 }
 
 .btn-small {

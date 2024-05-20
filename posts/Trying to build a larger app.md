@@ -1,5 +1,5 @@
 ---
-title: 'What I learned from trying to build a larger app'
+title: 'Trying to build a larger app'
 date: '2024-05-14'
 ---
 

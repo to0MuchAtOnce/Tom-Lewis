@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   padding: 0 1em;
   padding-left: 16px;
   width: 100vw;
-  max-width: 1096px;
+  max-width: 780px;
   margin: 0 auto;
   background: ${(props) => props.theme.mainBg};
   height: 50px;
@@ -39,7 +39,7 @@ export const HeaderContainer = styled.header`
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 28px;
+    font-size: 1.75em;
     padding: 0;
     margin: 0;
   }
@@ -64,7 +64,7 @@ export const HeaderLinkContainer = styled.div`
 
 export const LogoContainer = styled.div`
   display: flex;
-  font-size: 1.6rem;
+  font-size: 1.6em;
   font-weight: 700;
 
   :hover {
@@ -72,7 +72,7 @@ export const LogoContainer = styled.div`
   }
 
   .LogoFullStop {
-    font-size: 1.6rem;
+    font-size: 1.02em;
     color: ${(props) => props.theme.accent};
     font-weight: 900;
     margin-left: 3px;
