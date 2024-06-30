@@ -33,6 +33,11 @@ export const PostContainer = styled.div`
     border-radius: 4px;
   }
 
+  img.image {
+    height: 100%;
+    width: 100%;
+  }
+
   .inline-code {
     background: ${(props) => props.theme.codeBgInline};
     color: ${(props) => props.theme.codeTextInline};

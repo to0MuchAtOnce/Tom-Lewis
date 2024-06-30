@@ -11,4 +11,10 @@ export const PostContainer = styled.div`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     margin: 10px 0;
   }
+
+  img.image {
+    border: 1px solid #eaecef;
+    height: 50px;
+    width: 50px;
+  }
 `;
