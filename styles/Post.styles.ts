@@ -29,7 +29,6 @@ export const PostContainer = styled.div`
 
   code {
     font-size: 13px;
-    border: 0.9px solid #2d2d2d;
     padding: 2px 0px;
     border-radius: 4px;
   }

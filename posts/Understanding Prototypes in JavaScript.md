@@ -33,7 +33,7 @@ Inside the function we see various properties, one of which is <code class="inli
 
 ## The difference between **proto** & **prototype**.
 
-### 1. <code class="inline-code">`__proto__`</code> Property:
+### 1. `__proto__` Property:
 
 It's important to understand, that this prototype we see here, relates to <code class="inline-code">`__proto__`</code> and in a internal property of an object, pointing to its prototype e.g. the object it inherits properties and methods from. It belongs to the objects internal structure that determines the prototype chain. The Javascript engine uses <code class="inline-code">`__proto__`</code> is a property or method isn't found on the object itself. This is also a [deprecated](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) feature, so we should use <code class="inline-code">Object.getPrototypeOf()</code> instead, avoiding direct manipulation of <code class="inline-code">`__proto__`</code>.
 
