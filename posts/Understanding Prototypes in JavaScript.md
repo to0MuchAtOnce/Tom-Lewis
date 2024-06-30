@@ -26,7 +26,8 @@ function Book(title, author, numPages, isRead) {
 
 If we log <code class="inline-code">this.info</code> to the console we can see the function and its structure:
 
-![Screenshot 2024-06-27 at 20.41.25](inkdrop://file:Se5l4fMN3)
+![img]()
+
 Inside the function we see various properties, one of which is <code class="inline-code">prototype</code>. Which we can see is also an object. This is because every function in JavaScript automatically gets a <code class="inline-code">prototype</code> property when it's created. If we open the object we see that there is a constructor which points to the function <code class="inline-code">info()</code>. This is because all objects contain a prototypical reference to the original object.
 
 ![Screenshot 2024-06-27 at 21.04.39](inkdrop://file:DKkHw5yjN)
