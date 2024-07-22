@@ -24,26 +24,31 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
 
       <div className='photo-cards-container'>
         {folders &&
-          folders.map((folder) => {
-            const linkTitle = folder?.name
-              ? folder?.name.charAt(0).toUpperCase() + folder?.name.slice(1)
-              : '';
-            return (
-              <div key={folder.name}>
-                <PhotoCards>
-                  <Link href={`/folder/${folder?.path}`} passHref>
-                    <Card
-                      image={folder?.firstImage}
-                      showPhotoTitle={true}
-                      showCategory={true}
-                      categoryType={folder.type}
-                      title={linkTitle}
-                    />
-                  </Link>
-                </PhotoCards>
-              </div>
-            );
-          })}
+          folders
+            .filter((folder) => {
+              console.log(folder.name); // Log each folder name before filtering
+              return folder.name !== 'blog-images';
+            })
+            .map((folder) => {
+              const linkTitle = folder?.name
+                ? folder?.name.charAt(0).toUpperCase() + folder?.name.slice(1)
+                : '';
+              return (
+                <div key={folder.name}>
+                  <PhotoCards>
+                    <Link href={`/folder/${folder?.path}`} passHref>
+                      <Card
+                        image={folder?.firstImage}
+                        showPhotoTitle={true}
+                        showCategory={true}
+                        categoryType={folder.type}
+                        title={linkTitle}
+                      />
+                    </Link>
+                  </PhotoCards>
+                </div>
+              );
+            })}
       </div>
     </Container>
   );
