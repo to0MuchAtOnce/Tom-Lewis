@@ -25,10 +25,7 @@ const Photo: NextPage<FolderProps> = ({ folders }) => {
       <div className='photo-cards-container'>
         {folders &&
           folders
-            .filter((folder) => {
-              console.log(folder.name); // Log each folder name before filtering
-              return folder.name !== 'blog-images';
-            })
+            .filter((folder) => folder.name !== 'blog-images')
             .map((folder) => {
               const linkTitle = folder?.name
                 ? folder?.name.charAt(0).toUpperCase() + folder?.name.slice(1)
