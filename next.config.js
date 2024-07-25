@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  concurrentFeatures: true,
-  fastRefresh: true,
-
   async redirects() {
     return [
       {
