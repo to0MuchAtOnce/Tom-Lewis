@@ -88,8 +88,6 @@ time {
 }
 
 .cards-container {
-  display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
